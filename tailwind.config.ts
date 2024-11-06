@@ -9,13 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          "100": "#70A15",
+        },
+        cont: {
+          "100": "#565855",
+        },
+        pp: {
+          "100": "#00000099",
+        },
       },
     },
     fontFamily: {
       league: ["var(--font-league)"],
       lakwa: ["var(--font-lakwa)"],
+      fenix: ["var(--font-fenix)"],
     },
   },
 

@@ -7,11 +7,17 @@ const league = localFont({
   variable: "--font-league",
   weight: "100 200 300 400 500 600 700 800 900",
 });
+const fenix = localFont({
+  src: "./fonts/Fenix.ttf",
+  variable: "--font-fenix",
+  weight: "100 200 300 400 500 600 700 800 900",
+});
 const lakwa = localFont({
   src: "./fonts/Lakwa.ttf",
   variable: "--font-lakwa",
   weight: "100 200 300 400 500 600 700 800 900",
 });
+
 export const metadata: Metadata = {
   title: "Cook Fresh",
   description:
@@ -28,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${league.variable} ${lakwa.variable}  antialiased`}>
+      <body
+        className={`${league.variable} ${lakwa.variable} ${fenix.variable}  antialiased`}
+      >
         {children}
       </body>
     </html>

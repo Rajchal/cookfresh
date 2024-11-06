@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-logo {
+    @apply text-[26px] weight-[400] line-height-[34.97px];
+  }
+  .text-option {
+    @apply text-[24px] weight-[400] line-height-[22.08px];
+  }
+  .text-data {
+    @apply text-[40px] weight-[500] line-height-[60px];
+  }
+  .text-plan {
+    @apply text-[30px] weight-[400] line-height-[27.6px] align-middle;
+  }
+  .text-week {
+    @apply text-[40px] weight-[400] line-height-[36.8px] align-middle;
+  }
+  .text-w-option {
+    @apply text-[48px] weight-[400] line-height-[44.16px] align-middle;
+  }
+  .text-w-o-image {
+    @apply text-[32px] weight-[400] line-height-[35.74px];
+  }
+  .text-browse {
+    @apply text-[28px] weight-[400] line-height-[25.76px] align-middle;
+  }
+  .text-get {
+    @apply text-[32px] weight-[400] line-height-[29.44px] align-middle;
+  }
+  .text-little {
+    @apply text-[20px] weight-[400] line-height-[18.4px] align-middle;
+  }
+  .text-price {
+    @apply text-[24px] weight-[700] line-height-[22.08px] align-middle;
+  }
+  .text-follow {
+    @apply text-[36px] weight-[400] line-height-[33.12px] align-middle;
+  }
+  .text-sign {
+    @apply text-[20px] weight-[400] line-height-[18.4px] align-middle;
+  }
+  .text-descp {
+    @apply text-[16px] weight-[400] line-height-[14.72px];
+  }
+  .text-info {
+    @apply text-[32px] weight-[400] line-height-[29.44px] paragraph-[5px];
+  }
+  .text-i-content {
+    @apply text-[24px] weight-[400] line-height-[34px] paragraph-[5px];
+  }
+}
