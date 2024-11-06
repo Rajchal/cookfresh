@@ -51,4 +51,15 @@
   .text-i-content {
     @apply text-[24px] weight-[400] line-height-[34px] paragraph-[5px];
   }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
 }

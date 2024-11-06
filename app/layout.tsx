@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 
+import "./globals.css";
+import Navbar from "@/components/navigation/navbar/Navbar";
 const league = localFont({
   src: "./fonts/LeagueSpartan.ttf",
   variable: "--font-league",
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${league.variable} ${lakwa.variable} ${fenix.variable}  antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
