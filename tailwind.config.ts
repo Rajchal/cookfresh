@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          "100": "#70A15",
+        logo: {
+          "100": "#70A15F",
         },
         cont: {
           "100": "#565855",

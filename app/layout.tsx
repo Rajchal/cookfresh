@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${league.variable} ${lakwa.variable} ${fenix.variable}  antialiased`}
+        className={`${league.className} ${lakwa.variable} ${fenix.variable}  antialiased`}
       >
         <Navbar />
         {children}
