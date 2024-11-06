@@ -13,7 +13,12 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      league: ["var(--font-league)"],
+      lakwa: ["var(--font-lakwa)"],
+    },
   },
+
   plugins: [],
 };
 export default config;
