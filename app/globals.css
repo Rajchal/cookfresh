@@ -46,6 +46,9 @@
   .text-follow {
     @apply text-[36px] font-[400] leading-[33.12px] align-middle;
   }
+  .text-login {
+    @apply text-[36px] font-[500] leading-[33.12px] align-middle;
+  }
   .text-sign {
     @apply text-[20px] font-[400] leading-[18.4px] align-middle;
   }
@@ -68,5 +71,11 @@
 
   .flex-start {
     @apply flex justify-start items-center;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }

@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,6 +19,17 @@ const config: Config = {
         pp: {
           "100": "#00000099",
         },
+        or: {
+          "100": "#00000080",
+        },
+        sigg: {
+          "100": "#00000099",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
     },
     fontFamily: {
@@ -25,8 +37,12 @@ const config: Config = {
       lakwa: ["var(--font-lakwa)"],
       fenix: ["var(--font-fenix)"],
     },
+    backgroundImage: {
+      auth: 'url("/images/auth-bg.png")',
+      authmob: 'url("/images/auth-mob.png")',
+    },
   },
 
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

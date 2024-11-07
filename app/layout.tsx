@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import Navbar from "@/components/navigation/navbar/Navbar";
 const league = localFont({
   src: "./fonts/LeagueSpartan.ttf",
   variable: "--font-league",
@@ -23,9 +22,6 @@ export const metadata: Metadata = {
   title: "Cook Fresh",
   description:
     "Your Ultimate Recipe Finder and Meal Planner! Welcome to Cook Fresh, the one-stop destination for food lovers seeking fresh, easy-to-follow recipes and meal inspiration. At Cook Fresh, you can search thousands of recipes across various cuisines, discover each dish's ingredients, and follow simple step-by-step instructions. Whether you're a beginner or a seasoned chef, Cook Fresh will guide you to create meals that delight. Plus, based on your preferences, Cook Fresh offers personalized dish recommendations, making it easier to discover new favorites. From quick dinners to gourmet dishes, Cook Fresh makes cooking enjoyable, fresh, and accessible!",
-  icons: {
-    icon: "/icons/logo.svg",
-  },
 };
 
 export default function RootLayout({
@@ -38,7 +34,6 @@ export default function RootLayout({
       <body
         className={`${league.className} ${lakwa.variable} ${fenix.variable}  antialiased`}
       >
-        <Navbar />
         {children}
       </body>
     </html>
