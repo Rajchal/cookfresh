@@ -25,6 +25,9 @@ const config: Config = {
         sigg: {
           "100": "#00000099",
         },
+        already: {
+          "100": "#00000099",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
