@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import {
   DefaultValues,
   FieldValues,
@@ -21,6 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import ROUTES from "@/constants/routes";
+import { toast } from "@/hooks/use-toast";
 
 interface AuthFormProps<T extends FieldValues> {
   formType: "login" | "signup";
@@ -40,7 +43,21 @@ const AuthForm = <T extends FieldValues>({
     resolver: zodResolver(schema),
     defaultValues: defaultValues as DefaultValues<T>,
   });
-
+  const handleSignIn = async () => {
+    try {
+      await signIn("google", { callbackUrl: ROUTES.HOME, redirect: false });
+    } catch (error) {
+      console.log(error);
+      toast({
+        title: "Sign in failed",
+        description:
+          error instanceof Error
+            ? error.message
+            : "An error occurred dugin Sign in",
+        variant: "destructive",
+      });
+    }
+  };
   const handleSubmit: SubmitHandler<T> = async () => {};
   const buttonType = formType === "login" ? "Log in" : "Sign up";
   const butt = formType === "login" ? "mb-[30px]" : "mb-[10px]";
@@ -114,7 +131,10 @@ const AuthForm = <T extends FieldValues>({
         <hr className="grow border-t-[1.5px] border-or-100" />
       </div>
       <div className={`${butt} mx-auto flex  w-[326px] items-center gap-2.5`}>
-        <Button className="h-[59px] grow border border-black bg-white text-[20px] text-sigg-100 hover:bg-stone-300 hover:text-sigg-100">
+        <Button
+          onClick={() => handleSignIn()}
+          className="h-[59px] grow border border-black bg-white text-[20px] text-sigg-100 hover:bg-stone-300 hover:text-sigg-100"
+        >
           <Image src="images/google.svg" alt="google" width={30} height={30} />
           Continue with Google
         </Button>
