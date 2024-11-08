@@ -59,6 +59,7 @@ const config: Config = {
       auth: 'url("/images/auth-bg.png")',
       authmob: 'url("/images/auth-mob.png")',
       rect: 'url("/images/recttt.png")',
+      pan: 'url("/images/getStarted.png")',
     },
   },
 

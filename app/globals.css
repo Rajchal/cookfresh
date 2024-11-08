@@ -35,7 +35,7 @@
     @apply text-[28px] font-[400] leading-[25.76px] align-middle;
   }
   .text-get {
-    @apply text-[32px] font-[400] leading-[29.44px] align-middle;
+    @apply text-[32px] font-[600] leading-[29.44px] align-middle;
   }
   .text-little {
     @apply text-[20px] font-[400] leading-[18.4px] align-middle;
