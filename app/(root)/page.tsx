@@ -7,12 +7,12 @@ import ROUTES from "@/constants/routes";
 export default async function Home() {
   return (
     <>
-      <section className="border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px]">
+      <section className="border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px] ">
         <div className="text-data flex flex-col pl-[109.22px] pt-[71.8] text-logo-100">
           <p>Easy meal kits.</p>
           <p>Fresh ingredients</p>
           <p>Fast delivery.</p>
-          <Button className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-stone-300">
+          <Button className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900">
             Start your plan
           </Button>
         </div>
@@ -27,7 +27,7 @@ export default async function Home() {
             prepared meals delivered fresh with top quality ingredients now
             starting at just $9.99.
           </p>
-          <Button className="self-center rounded-full bg-white p-5 text-[20px] font-[500] text-logo-100 hover:bg-green-900">
+          <Button className="self-center rounded-full bg-white p-5 text-[20px] font-[500] text-logo-100 hover:bg-stone-300">
             Start your plan
           </Button>
         </div>
@@ -39,6 +39,13 @@ export default async function Home() {
           <p className="text-w-option text-logo-100 ">20+ Weekly Options</p>
         </div>
         <Swiper />
+
+        <Button className="mt-10 rounded-full border-4 border-logo-100 bg-white p-[25px] text-[28px] font-[500] text-logo-100 hover:bg-stone-300">
+          Browse Our Menus
+        </Button>
+      </section>
+      <section className="mt-28 flex items-center justify-center ">
+        <div className="bg-pan h-[973.49px] w-[513.58px]"></div>
       </section>
     </>
   );
