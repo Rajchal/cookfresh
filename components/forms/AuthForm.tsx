@@ -47,7 +47,7 @@ const AuthForm = <T extends FieldValues>({
   const tex =
     formType === "login" ? (
       <>
-        Don't have an account?{" "}
+        Don&apos;t have an account?{" "}
         <Link href="/signup" className="text-logo-100 hover:underline">
           Sign up
         </Link>
