@@ -40,6 +40,9 @@ const config: Config = {
         already: {
           "100": "#00000099",
         },
+        sec: {
+          "100": "#FCF8F0",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -55,6 +58,7 @@ const config: Config = {
     backgroundImage: {
       auth: 'url("/images/auth-bg.png")',
       authmob: 'url("/images/auth-mob.png")',
+      rect: 'url("/images/recttt.png")',
     },
   },
 
