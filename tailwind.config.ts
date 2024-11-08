@@ -43,6 +43,15 @@ const config: Config = {
         sec: {
           "100": "#FCF8F0",
         },
+        fol: {
+          "100": "#FAF2E2B2",
+        },
+        offer: {
+          "100": "#00000099",
+        },
+        kairo: {
+          "100": "#C8C0B1",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

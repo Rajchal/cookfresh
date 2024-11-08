@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Swiper } from "@/components/swiper/Swiper";
 import { Button } from "@/components/ui/button";
@@ -64,10 +65,10 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-between">
-        <div className="flex flex-col text-center">
-          <p>Follow Us</p>
-          <div className="flex">
+      <section className="flex justify-between border-y-[3px] border-kairo-100 bg-fol-100">
+        <div className="flex basis-1/2 flex-col items-center justify-center text-center">
+          <p className="text-follow mb-16 mt-10">Follow Us</p>
+          <div className="mb-[50px] flex gap-14">
             <Image
               src="/images/facebook.svg"
               width={50}
@@ -78,24 +79,76 @@ export default async function Home() {
               src="/images/instagram.svg"
               width={50}
               height={50}
-              alt="facebook"
+              alt="instagram"
             />
             <Image
               src="/images/pintrest.svg"
               width={50}
               height={50}
-              alt="facebook"
+              alt="pintrest"
             />
             <Image
               src="/images/tiktok.svg"
               width={50}
               height={50}
-              alt="facebook"
+              alt="tiktok"
             />
           </div>
         </div>
+        <div className="basis-1/2">
+          <div className="mt-10 flex flex-col items-center justify-center">
+            <p className="text-follow">Discover New Recipes </p>
+            <form className="my-7 flex">
+              <input
+                type="email"
+                placeholder="Email"
+                className=" h-[61px] border border-logo-100 pl-5 text-[24px]"
+              />
+              <Button className="m-0 h-[61px] rounded-none bg-logo-100 text-[32px] text-white">
+                GO
+              </Button>
+            </form>
+            <p className="text-little text-offer-100">
+              Sign up for offers, recipes, updates & more
+            </p>
+            <p className="text-little mb-10 text-offer-100">
+              (Follow us us other platforms for special discounts)
+            </p>
+          </div>
+        </div>
 
-        <div className="absolute left-1/2 my-[100px] -ml-0.5 h-[200px] w-0.5 bg-gray-600 "></div>
+        <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[202px] w-[3px] bg-kairo-100 "></div>
+      </section>
+      <section className="flex items-center justify-between">
+        <div className="flex basis-1/3 flex-col items-center justify-center">
+          <div className="flex">
+            <Image
+              src="/icons/logg.png"
+              width={76.65}
+              height={71.63}
+              alt="CookFresh Logo"
+              className="[1100px]:size-20 size-16 "
+            />
+            <div className="text-logo max-[1100px]:text-mob-logo flex-col font-lakwa text-black">
+              <p>Cook</p> <p>Fresh</p>
+            </div>
+          </div>
+          <div>
+            Fresh ingredients, easy recipes, delicious meals delivered with just
+            one click
+          </div>
+        </div>
+        <div className="basis-1/3 text-center">
+          <div>Helpful Links</div>
+          <div>Services</div>
+          <div>Support</div>
+          <div>Terms and Conditions</div>
+          <div>Privary Policy</div>
+        </div>
+        <div className="basis-1/3 text-center">
+          <div>number</div>
+          <div>email</div>
+        </div>
       </section>
     </>
   );
