@@ -52,6 +52,9 @@ const config: Config = {
         kairo: {
           "100": "#C8C0B1",
         },
+        inf: {
+          "100": "#3E413C",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

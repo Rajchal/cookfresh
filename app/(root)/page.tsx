@@ -121,33 +121,41 @@ export default async function Home() {
       </section>
       <section className="flex items-center justify-between">
         <div className="flex basis-1/3 flex-col items-center justify-center">
-          <div className="flex">
+          <div className="text-nowrap  px-24 text-stone-500">
+            Copyright © Cookfresh. All rights reserved.
+          </div>
+        </div>
+        <div className="my-20 basis-1/3 px-7 text-center">
+          <div className="text-info mb-5 text-logo-100">Helpful Links</div>
+          <div className="text-i-content text-inf-100">Services</div>
+          <div className="text-i-content text-inf-100">Support</div>
+          <div className="text-i-content text-inf-100">
+            Terms and Conditions
+          </div>
+          <div className="text-i-content text-inf-100">Privary Policy</div>
+        </div>
+        <div className="basis-1/3 text-center">
+          <div className="text-info mb-5 text-logo-100">Contact Us</div>
+          <div className="flex items-center justify-center">
             <Image
-              src="/icons/logg.png"
-              width={76.65}
-              height={71.63}
-              alt="CookFresh Logo"
-              className="[1100px]:size-20 size-16 "
+              src="/images/gg_phone.svg"
+              width={24}
+              height={24}
+              alt="phone"
             />
-            <div className="text-logo max-[1100px]:text-mob-logo flex-col font-lakwa text-black">
-              <p>Cook</p> <p>Fresh</p>
+            <div className="text-i-content text-inf-100">9841274589</div>
+          </div>
+          <div className="flex items-center justify-center">
+            <Image
+              src="/images/uiw_mail.svg"
+              width={24}
+              height={24}
+              alt="email"
+            />
+            <div className="text-i-content text-inf-100">
+              cookfresh.eatfresh@gmail.com
             </div>
           </div>
-          <div>
-            Fresh ingredients, easy recipes, delicious meals delivered with just
-            one click
-          </div>
-        </div>
-        <div className="basis-1/3 text-center">
-          <div>Helpful Links</div>
-          <div>Services</div>
-          <div>Support</div>
-          <div>Terms and Conditions</div>
-          <div>Privary Policy</div>
-        </div>
-        <div className="basis-1/3 text-center">
-          <div>number</div>
-          <div>email</div>
         </div>
       </section>
     </>
