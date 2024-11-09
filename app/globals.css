@@ -25,6 +25,9 @@
   .text-week {
     @apply text-[40px] font-[400] leading-[36.8px] align-middle;
   }
+  .text-weak {
+    @apply text-[40px] font-[800] leading-[36.8px] align-middle;
+  }
   .text-w-option {
     @apply text-[48px] font-[400] leading-[44.16px] align-middle;
   }
@@ -60,6 +63,15 @@
   }
   .text-i-content {
     @apply text-[24px] font-[400] leading-[34px] space-y-[5px];
+  }
+  .text-makee {
+    @apply text-[60px] font-[500] leading-[55.2px];
+  }
+  .text-easyy {
+    @apply text-[50px] font-[600] leading-[46px];
+  }
+  .text-tinku {
+    @apply text-[20px] font-[400] leading-[20px];
   }
   .flex-center {
     @apply flex justify-center items-center;

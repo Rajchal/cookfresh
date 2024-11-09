@@ -55,6 +55,9 @@ const config: Config = {
         inf: {
           "100": "#3E413C",
         },
+        here: {
+          "100": "#FCF8F0",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -72,6 +75,8 @@ const config: Config = {
       authmob: 'url("/images/auth-mob.png")',
       rect: 'url("/images/recttt.png")',
       pan: 'url("/images/getStarted.png")',
+      board: 'url("/images/board.png")',
+      greenBasket: 'url("/images/greenBasket.png")',
     },
   },
 
