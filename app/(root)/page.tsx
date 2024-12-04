@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { Swiper } from "@/components/swiper/Swiper";
 import { Button } from "@/components/ui/button";
-import ROUTES from "@/constants/routes";
 
 export default async function Home() {
   return (
