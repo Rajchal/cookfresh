@@ -1,9 +1,16 @@
 "use client";
 
+import Image from "next/image";
+import { Props } from "next/script";
 import React from "react";
 
-interface props {
-  meals: any[];
+interface Meal {
+  strMeal: string;
+  strMealThumb: string;
+}
+
+interface Props {
+  meals: Meal[];
 }
 
 const Menu = () => {
@@ -12,27 +19,31 @@ const Menu = () => {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
     );
     const data = await response.json();
-    return data.meals;
+    displayResults(data.meals);
   }
-  function displayResults(meals: props) {
-    if (meals) {
-      meals.forEach((meal) => {
-        const mealCard = `
-                <div class="col-md-4 mb-4">
-                    <div class="card" onclick="redirectToPage('${meal.strMeal}')">
-                        <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
-                        <div class="card-body">
-                            <h5 class="card-title">${meal.strMeal}</h5>
-                        </div>
-                    </div>
-                </div>
-            `;
-        searchResults.innerHTML += mealCard;
-      });
-    } else {
-      searchResults.innerHTML =
-        '<p class="text-center">No meals found. Try another search.</p>';
-    }
+  function displayResults({ meals }: Props) {
+    return (
+      <>
+        if (meals){" "}
+        {meals.forEach((meal) => (
+          <div>
+            <div>
+              <Image
+                src={meal.strMealThumb}
+                width={50}
+                height={50}
+                alt={meal.strMeal}
+              />
+              <div>
+                <h5>${meal.strMeal}</h5>
+              </div>
+            </div>
+          </div>
+        ))}
+        else
+        {<p className="text-center">No meals found. Try another search.</p>}
+      </>
+    );
   }
 
   return (
@@ -53,7 +64,7 @@ const Menu = () => {
             const query = (
               document.querySelector('input[type="text"]') as HTMLInputElement
             ).value;
-            <displayResults />;
+            searchMeals(query);
           }}
         >
           Search
