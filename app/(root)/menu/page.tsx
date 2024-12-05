@@ -1,16 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Props } from "next/script";
 import React from "react";
 
 interface Meal {
   strMeal: string;
   strMealThumb: string;
-}
-
-interface Props {
-  meals: Meal[];
 }
 
 const Menu = () => {
@@ -19,24 +14,23 @@ const Menu = () => {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
     );
     const data = await response.json();
-    displayResults(data.meals);
+    console.log(data.meals);
+    displayResults(data.meals.strMeal, data.meals.strMealThumb);
   }
-  function displayResults({ meals }: Props) {
+  function displayResults({ strMeal, strMealThumb }: Meal) {
     return (
       <>
-        if (meals){" "}
-        {meals.forEach((meal) => (
-          <div>
+        if (meals)
+        {meals.map((meal) => (
+          <div key={meal.strMeal}>
+            <Image
+              src={meal.strMealThumb}
+              width={50}
+              height={50}
+              alt={meal.strMeal}
+            />
             <div>
-              <Image
-                src={meal.strMealThumb}
-                width={50}
-                height={50}
-                alt={meal.strMeal}
-              />
-              <div>
-                <h5>${meal.strMeal}</h5>
-              </div>
+              <h5>${meal.strMeal}</h5>
             </div>
           </div>
         ))}
