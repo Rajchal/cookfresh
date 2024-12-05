@@ -20,7 +20,6 @@ const Menu = () => {
   function displayResults(meals: Meal[]) {
     return (
       <>
-        if (meals)
         {meals.map((meal) => (
           <div key={meal.strMeal}>
             <Image
@@ -34,8 +33,6 @@ const Menu = () => {
             </div>
           </div>
         ))}
-        else
-        {<p className="text-center">No meals found. Try another search.</p>}
       </>
     );
   }
@@ -64,6 +61,9 @@ const Menu = () => {
           Search
         </button>
       </form>
+      <div>
+        <displayResults meals={searchMeals("apple")} />
+      </div>
     </>
   );
 };
