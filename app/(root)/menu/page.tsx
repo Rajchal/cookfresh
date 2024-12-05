@@ -15,9 +15,9 @@ const Menu = () => {
     );
     const data = await response.json();
     console.log(data.meals);
-    displayResults(data.meals.strMeal, data.meals.strMealThumb);
+    displayResults(data.meals);
   }
-  function displayResults({ strMeal, strMealThumb }: Meal) {
+  function displayResults(meals: Meal[]) {
     return (
       <>
         if (meals)
