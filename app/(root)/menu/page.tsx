@@ -19,7 +19,7 @@ const Menu = () => {
         </button>
       </form>
       <div>
-        <FetchMenu />
+        <FetchMenu query="chicken" />
       </div>
     </>
   );

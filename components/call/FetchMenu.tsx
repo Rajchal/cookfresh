@@ -15,6 +15,7 @@ const searchMeal = async (query: string) => {
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
   );
   const data = await response.json();
+  console.log(data.meals);
   return data.meals;
 };
 function displayResults(meals: Meal[]) {
