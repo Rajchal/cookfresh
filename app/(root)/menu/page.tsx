@@ -14,20 +14,12 @@ const Menu = () => {
           placeholder="Search for meals"
           className="h-[50px] w-[300px] rounded-md border border-black p-2"
         />
-        <button
-          className="rounded-md bg-logo-100 p-2 text-white"
-          onClick={(e) => {
-            e.preventDefault();
-            const query = (
-              document.querySelector('input[type="text"]') as HTMLInputElement
-            ).value;
-          }}
-        >
+        <button className="rounded-md bg-logo-100 p-2 text-white">
           Search
         </button>
       </form>
       <div>
-        <FetchMenu query="apple" />
+        <FetchMenu />
       </div>
     </>
   );

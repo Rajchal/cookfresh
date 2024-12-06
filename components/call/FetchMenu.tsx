@@ -5,14 +5,18 @@ interface Meal {
   strMealThumb: string;
 }
 
-export default async function FetchMenu(query: string) {
+const FetchMenu = (query: string) => {
+  const dat = searchMeal(query);
+  console.log(dat);
+};
+
+const searchMeal = async (query: string) => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
   );
   const data = await response.json();
-  console.log(data.meals);
-  displayResults(data.meals);
-}
+  return data.meals;
+};
 function displayResults(meals: Meal[]) {
   return (
     <>
@@ -24,3 +28,4 @@ function displayResults(meals: Meal[]) {
     </>
   );
 }
+export default FetchMenu;
