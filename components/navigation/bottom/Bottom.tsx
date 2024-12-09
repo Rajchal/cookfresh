@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const Bottom = () => {
   return (
     <>
-      <section className="flex justify-between border-y-[3px] border-kairo-100 bg-fol-100">
+      <section className="flex-col justify-between border-y-[3px] border-kairo-100 bg-fol-100 footClash:flex">
         <div className="flex basis-1/2 flex-col items-center justify-center text-center">
           <p className="text-follow mb-16 mt-10">Follow Us</p>
           <div className="mb-[50px] flex gap-14">
