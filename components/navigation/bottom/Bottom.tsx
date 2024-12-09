@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const Bottom = () => {
   return (
     <>
-      <section className="flex-col justify-between border-y-[3px] border-kairo-100 bg-fol-100 footClash:flex">
+      <section className="flex justify-between border-y-[3px] border-kairo-100 bg-fol-100 max-footClash:flex-col">
         <div className="flex basis-1/2 flex-col items-center justify-center text-center">
           <p className="text-follow mb-16 mt-10">Follow Us</p>
           <div className="mb-[50px] flex gap-14">
@@ -57,7 +57,9 @@ const Bottom = () => {
           </div>
         </div>
 
-        <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[202px] w-[3px] bg-kairo-100 "></div>
+        <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[202px] w-[3px] bg-kairo-100 max-footClash:hidden" />
+        <div className="absolute left-1/2 my-[33px] -ml-0.5 mt-[240px] h-[3px] w-[calc(50%-40px)] bg-kairo-100 footClash:hidden" />
+        <div className="absolute right-1/2 my-[33px] -ml-0.5 mt-[240px] h-[3px] w-[calc(50%-40px)] bg-kairo-100 footClash:hidden" />
       </section>
       <section className="flex items-center justify-between">
         <div className="flex basis-1/3 flex-col items-center justify-center">
