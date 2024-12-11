@@ -16,8 +16,8 @@ export default async function Home() {
           </Button>
         </div>
       </section>
-      <section className="mt-28 flex items-center justify-center ">
-        <div className="flex h-[274.48] w-[331.56] flex-col justify-center bg-logo-100 shadow-md">
+      <section className="mt-28 flex items-center justify-center max-mainClash:flex-col">
+        <div className="flex h-[274.48] w-[331.56] flex-col justify-center bg-logo-100 shadow-md max-mainClash:absolute">
           <p className="text-price mb-5 text-center text-white">
             New!! Pre-prepared meals
           </p>
@@ -34,8 +34,8 @@ export default async function Home() {
           src="/images/mix.png"
           alt="mix"
           width={627.89}
-          height={274.48}
-          className="shadow-md"
+          height={271.48}
+          className="max-mainClash:[w-[727.89px]] h-[274.48px] w-[627.89px] object-cover shadow-md max-mainClash:h-[314.48]"
         />
       </section>
       <section className="mt-28 flex flex-col items-center justify-center bg-sec-100 text-center">

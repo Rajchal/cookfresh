@@ -20,6 +20,8 @@ const config: Config = {
       "2xl": "1536px",
       gg: "428px",
       footClash: "880px",
+
+      mainClash: "905px",
     },
     extend: {
       colors: {
