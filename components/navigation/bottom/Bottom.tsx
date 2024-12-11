@@ -61,9 +61,9 @@ const Bottom = () => {
         <div className="absolute left-1/2 my-[33px] -ml-0.5 mt-[240px] h-[3px] w-[calc(50%-40px)] bg-kairo-100 footClash:hidden" />
         <div className="absolute right-1/2 my-[33px] -ml-0.5 mt-[240px] h-[3px] w-[calc(50%-40px)] bg-kairo-100 footClash:hidden" />
       </section>
-      <section className="flex items-center justify-between">
+      <section className="flex items-center justify-between max-sm:flex-col">
         <div className="flex basis-1/3 flex-col items-center justify-center">
-          <div className="text-nowrap  px-24 text-stone-500">
+          <div className="text-nowrap  px-24 pt-24 text-stone-500">
             Copyright © Cookfresh. All rights reserved.
           </div>
         </div>
