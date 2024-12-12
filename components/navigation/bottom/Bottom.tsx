@@ -7,51 +7,59 @@ const Bottom = () => {
     <>
       <section className="flex justify-between border-y-[3px] border-kairo-100 bg-fol-100 max-footClash:flex-col">
         <div className="flex basis-1/2 flex-col items-center justify-center text-center">
-          <p className="text-follow mb-16 mt-10">Follow Us</p>
-          <div className="mb-[50px] flex gap-14">
+          <p className="text-follow mb-16 mt-10 max-sm:text-[26px]">
+            Follow Us
+          </p>
+          <div className="mb-[50px] flex gap-14 max-sm:gap-8 max-sm:pl-4">
             <Image
               src="/images/facebook.svg"
               width={50}
               height={50}
               alt="facebook"
+              className="max-sm:size-[40px]"
             />
             <Image
               src="/images/instagram.svg"
               width={50}
               height={50}
               alt="instagram"
+              className="max-sm:size-[40px]"
             />
             <Image
               src="/images/pintrest.svg"
               width={50}
               height={50}
               alt="pintrest"
+              className="max-sm:size-[40px]"
             />
             <Image
               src="/images/tiktok.svg"
               width={50}
               height={50}
               alt="tiktok"
+              className="max-sm:size-[40px]"
             />
           </div>
         </div>
         <div className="basis-1/2">
           <div className="mt-10 flex flex-col items-center justify-center">
-            <p className="text-follow">Discover New Recipes </p>
+            <p className="text-follow max-sm:text-[26px]">
+              Discover New Recipes
+            </p>
             <form className="my-7 flex">
               <input
                 type="email"
                 placeholder="Email"
-                className=" h-[61px] border border-logo-100 pl-5 text-[24px]"
+                className=" h-[61px] border border-logo-100 pl-5 text-[24px] max-sm:h-[40px] max-sm:w-[200px]"
               />
-              <Button className="m-0 h-[61px] rounded-none bg-logo-100 text-[32px] text-white">
+              <Button className="m-0 h-[61px] rounded-none bg-logo-100 text-[32px] text-white max-sm:h-[40px]">
                 GO
               </Button>
             </form>
-            <p className="text-little text-offer-100">
+            <p className="text-little text-offer-100 max-sm:text-sm">
               Sign up for offers, recipes, updates & more
             </p>
-            <p className="text-little mb-10 text-offer-100">
+            <p className="text-little mb-10 text-offer-100 max-sm:text-sm">
               (Follow us us other platforms for special discounts)
             </p>
           </div>
