@@ -17,11 +17,11 @@ export default async function Home() {
         </div>
       </section>
       <section className="mt-28 flex items-center justify-center max-mainClash:flex-col">
-        <div className="flex h-[274.48] w-[331.56] flex-col justify-center bg-logo-100 shadow-md max-mainClash:absolute">
-          <p className="text-price mb-5 text-center text-white">
+        <div className="flex h-[274.48] w-[331.56] flex-col justify-center rounded-xl bg-logo-100 shadow-md max-mainClash:absolute max-sm:w-[250px]">
+          <p className="text-price mb-5 text-center text-white max-sm:text-[20px]">
             New!! Pre-prepared meals
           </p>
-          <p className="text-option mb-5 px-3 text-center text-white">
+          <p className="text-option mb-5 px-3 text-center text-white max-sm:text-[18px]">
             Dont have time or skills to cook meal from scratch??? Get pre
             prepared meals delivered fresh with top quality ingredients now
             starting at just $9.99.
@@ -51,7 +51,7 @@ export default async function Home() {
       </section>
       <section className="my-28 flex items-center justify-center">
         <div className="flex h-[513.58px] w-[973.49px] items-center justify-center bg-pan">
-          <div className="flex h-[262px] w-[517px] flex-col items-center justify-center bg-white">
+          <div className="flex h-[262px] w-[517px] flex-col items-center justify-center rounded-xl bg-white max-sm:w-[300px]">
             <p className="text-get mb-5 text-logo-100">GET STARTED NOW</p>
             <div className="text-little mb-5 flex">
               {`for as little as\u00A0`}
