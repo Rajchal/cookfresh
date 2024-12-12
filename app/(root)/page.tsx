@@ -51,11 +51,13 @@ export default async function Home() {
       </section>
       <section className="my-28 flex items-center justify-center">
         <div className="flex h-[513.58px] w-[973.49px] items-center justify-center bg-pan">
-          <div className="flex h-[262px] w-[517px] flex-col items-center justify-center rounded-xl bg-white max-sm:w-[300px]">
-            <p className="text-get mb-5 text-logo-100">GET STARTED NOW</p>
-            <div className="text-little mb-5 flex">
+          <div className="flex h-[262px] w-[517px] flex-col items-center justify-center rounded-xl bg-white max-sm:w-[calc(100%-20px)] ">
+            <p className="text-get mb-5 text-logo-100 max-sm:text-2xl">
+              GET STARTED NOW
+            </p>
+            <div className="text-little mb-5 flex max-sm:text-xl">
               {`for as little as\u00A0`}
-              <p className="text-price text-logo-100"> $5.99</p>
+              <p className="text-price text-logo-100 max-sm:text-xl"> $5.99</p>
             </div>
             <Button className="rounded-full bg-logo-100  p-7 text-[24px] font-[400] text-white hover:bg-green-900">
               Start your plan
