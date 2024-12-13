@@ -1,8 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+
+import Login from "@/components/Login";
 
 const Navbar = () => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupVisible(!isPopupVisible);
+  };
   return (
     <nav className="flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12">
       <Link href="/" className="flex gap-0">
@@ -39,11 +48,22 @@ const Navbar = () => {
       </span>
 
       <div className="flex-[25%]"></div>
-      <Link href="/login">
-        <button className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden">
-          Login
-        </button>
-      </Link>
+
+      <button
+        onClick={togglePopup}
+        className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
+      >
+        Login
+      </button>
+      {isPopupVisible && (
+        <div>
+          <div>
+            <h2>Login</h2>
+            <button onClick={togglePopup}>Close</button>
+            <Login />
+          </div>
+        </div>
+      )}
       <Link href="/signup">
         <button className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 max-sm:hidden">
           Sign Up
