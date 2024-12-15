@@ -23,9 +23,9 @@ const AboutUs = () => {
               alt="reliable"
               width={199}
               height={199}
-              className="mb-8"
+              className="mb-8 max-sm:size-[60px]"
             />
-            <p>Reliable Recipes</p>
+            <p className="max-sm:text-sm text-center">Reliable Recipes</p>
           </div>
           <div className="flex h-full basis-1/3 flex-col items-center justify-between">
             <Image
@@ -33,9 +33,9 @@ const AboutUs = () => {
               alt="reliable"
               width={225}
               height={225}
-              className="mb-3"
+              className="mb-3 max-sm:size-[70px]"
             />
-            <p>Farm-Fresh Ingredients</p>
+            <p className="text-center max-sm:text-sm">Farm-Fresh Ingredients</p>
           </div>
           <div className="flex h-full basis-1/3 flex-col items-center justify-between">
             <Image
@@ -43,9 +43,11 @@ const AboutUs = () => {
               alt="reliable"
               width={178}
               height={178}
-              className="mb-8"
+              className="mb-8 max-sm:size-[50px] "
             />
-            <p>Delicious Possibilities</p>
+            <p className="text-center max-sm:text-sm">
+              Delicious Possibilities
+            </p>
           </div>
         </div>
       </section>
