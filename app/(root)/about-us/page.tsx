@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,6 +7,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
 const AboutUs = () => {
+  let targ: string = "see more...";
+  let popo: string = "hidden";
+  const handlesee = () => {
+    popo = "";
+    targ = "hide";
+  };
   return (
     <>
       <section className="border border-t-[95px] bg-board bg-cover bg-center bg-no-repeat text-center">
@@ -15,7 +23,9 @@ const AboutUs = () => {
       </section>
 
       <section className="flex-center my-36 flex-col">
-        <p className="text-makee mb-10 text-logo-100">Our Values</p>
+        <p className="text-makee mb-10 text-logo-100 max-sm:text-3xl">
+          Our Values
+        </p>
         <div className="text-browse flex w-screen items-end justify-around space-x-4">
           <div className="flex h-full basis-1/3 flex-col items-center justify-between">
             <Image
@@ -25,7 +35,7 @@ const AboutUs = () => {
               height={199}
               className="mb-8 max-sm:size-[60px]"
             />
-            <p className="max-sm:text-sm text-center">Reliable Recipes</p>
+            <p className="text-center max-sm:text-sm">Reliable Recipes</p>
           </div>
           <div className="flex h-full basis-1/3 flex-col items-center justify-between">
             <Image
@@ -52,29 +62,41 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="flex-center bg-here-100">
-        <div className="basis-1/3 px-20 py-10">
+        <div className="basis-1/3 pl-10">
           <Image
             src="/images/salady.png"
             alt="salady"
             width={500}
             height={500}
+            className="rounded-xl max-sm:hidden"
           />
         </div>
         <div className="basis-2/3 px-32 py-10">
           <p className="text-easyy text-logo-100">Here to Make Cooking Easy</p>
-          <p className="text-tinku">
-            We believe everyone deserves fresh and healthy food, so we&apos;ve
-            made it easy to prepare meals at home to inspire our inner creator
-            and connect us with our love for cooking. Our goal is to make
-            home-cooked meals simple, enjoyable, and accessible for everyone. By
-            delivering fresh, pre-portioned ingredients and chef-designed
-            recipes, we empower busy individuals and families to prepare
-            delicious, nutritious meals without the stress of meal planning or
-            grocery shopping. We are committed to reducing food waste,
-            supporting sustainable sourcing, and offering diverse options that
-            cater to a variety of tastes and dietary needs, making healthy
-            eating a convenient and enjoyable part of everyday life.
-          </p>
+          <div className="text-tinku">
+            <p>
+              We believe everyone deserves fresh and healthy food, so we&apos;ve
+              made it
+            </p>
+            <button
+              className="text-logo-100 hover:underline sm:hidden"
+              onClick={() => handlesee}
+            >
+              {targ}
+            </button>
+            <p className={`max-sm:${popo}`}>
+              easy to prepare meals at home to inspire our inner creator and
+              connect us with our love for cooking. Our goal is to make
+              home-cooked meals simple, enjoyable, and accessible for everyone.
+              By delivering fresh, pre-portioned ingredients and chef-designed
+              recipes, we empower busy individuals and families to prepare
+              delicious, nutritious meals without the stress of meal planning or
+              grocery shopping. We are committed to reducing food waste,
+              supporting sustainable sourcing, and offering diverse options that
+              cater to a variety of tastes and dietary needs, making healthy
+              eating a convenient and enjoyable part of everyday life.
+            </p>
+          </div>
         </div>
       </section>
 
