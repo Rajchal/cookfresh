@@ -59,7 +59,7 @@ const Bottom = () => {
             <p className="text-little text-offer-100 max-sm:text-sm">
               Sign up for offers, recipes, updates & more
             </p>
-            <p className="text-little mb-10 text-offer-100 max-sm:text-sm">
+            <p className="text-little mb-10 py-2 text-offer-100 max-sm:text-[13px]">
               (Follow us us other platforms for special discounts)
             </p>
           </div>
