@@ -70,8 +70,14 @@
   .text-easyy {
     @apply text-[50px] font-[600] leading-[46px];
   }
+  .text-eassy-mob {
+    @apply text-[35px] font-[600] leading-[30px];
+  }
   .text-tinku {
     @apply text-[20px] font-[400] leading-[20px];
+  }
+  .text-tinku-mob {
+    @apply text-[18px] font-[400] leading-[16px];
   }
   .flex-center {
     @apply flex justify-center items-center;

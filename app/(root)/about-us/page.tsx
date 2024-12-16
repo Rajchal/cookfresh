@@ -9,7 +9,7 @@ import ROUTES from "@/constants/routes";
 const HiddenSee = ({ is }: { is: boolean }) => {
   if (is) {
     return (
-      <p className="text-tinku">
+      <p className="text-tinku max-sm:text-tinku-mob">
         easy for you to get started. We provide you with a variety of recipes
         and ingredients that are fresh and delicious. Our mission is to help you
         make cooking fun and easy so you can enjoy delicious meals with your
@@ -73,30 +73,32 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="flex-center bg-here-100">
-        <div className="basis-1/3 pl-10">
+        <div className="basis-1/3 pl-10 max-sm:hidden">
           <Image
             src="/images/salady.png"
             alt="salady"
             width={500}
             height={500}
-            className="rounded-xl max-sm:hidden"
+            className="m-4 rounded-3xl"
           />
         </div>
         <div className="basis-2/3 px-32 py-10">
-          <p className="text-easyy text-logo-100">Here to Make Cooking Easy</p>
-          <div className="text-tinku">
+          <p className="text-easyy max-sm:text-eassy-mob pb-5 text-logo-100">
+            Here to Make Cooking Easy
+          </p>
+          <div className="text-tinku max-sm:text-tinku-mob">
             <p>
               We believe everyone deserves fresh and healthy food, so we&apos;ve
               made it
             </p>
-            <button
-              className="text-logo-100 hover:underline sm:hidden"
-              onClick={() => setIsOpen((prev) => !prev)}
-            >
-              see more..
-            </button>
             <HiddenSee is={isOpen} />
           </div>
+          <button
+            className="text-tinku max-sm:text-tinku-mob  pt-2 text-logo-100 hover:underline"
+            onClick={() => setIsOpen((prev) => !prev)}
+          >
+            {isOpen ? "Read Less^" : "Read More..."}
+          </button>
         </div>
       </section>
 
