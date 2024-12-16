@@ -24,6 +24,10 @@ const config: Config = {
       mainClash: "905px",
     },
     extend: {
+      textShadow: {
+        border:
+          "2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000",
+      },
       colors: {
         logo: {
           "100": "#70A15F",
@@ -83,6 +87,24 @@ const config: Config = {
     },
   },
 
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    function ({
+      addUtilities,
+    }: {
+      addUtilities: (
+        utilities: Record<string, { [key: string]: string }>,
+        variants: string[]
+      ) => void;
+    }) {
+      const newUtilities = {
+        ".text-border": {
+          textShadow:
+            "2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+    require("tailwindcss-animate"),
+  ],
 };
 export default config;

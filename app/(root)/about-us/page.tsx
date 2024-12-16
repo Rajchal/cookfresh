@@ -103,8 +103,10 @@ const AboutUs = () => {
       </section>
 
       <section>
-        <div className="my-24 h-[389px] w-screen bg-greenBasket py-40 pl-40">
-          <p className="text-weak text-logo-100">Get Started Today</p>
+        <div className="my-24 h-[389px] w-screen bg-greenBasket bg-right py-40 pl-40 max-sm:pl-2">
+          <p className="text-weak text-logo-100 text-border">
+            Get Started Today
+          </p>
           <Link href={ROUTES.SIGNUP}>
             <Button className="mt-6  rounded-full bg-logo-100 p-[25px] text-[30px] font-[400] text-white hover:bg-green-900">
               Sign up
