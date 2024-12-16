@@ -2,17 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
+const HiddenSee = ({ is }: { is: boolean }) => {
+  if (is) {
+    return (
+      <p className="text-tinku">
+        easy for you to get started. We provide you with a variety of recipes
+        and ingredients that are fresh and delicious. Our mission is to help you
+        make cooking fun and easy so you can enjoy delicious meals with your
+        loved ones. Our team of chefs and nutritionists work hard to create
+        recipes that are easy to follow and use fresh ingredients that are good
+        for you. We believe that everyone deserves to eat well, and we are here
+        to help you do just that.
+      </p>
+    );
+  }
+  return null;
+};
 const AboutUs = () => {
-  let targ: string = "see more...";
-  let popo: string = "hidden";
-  const handlesee = () => {
-    popo = "";
-    targ = "hide";
-  };
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <section className="border border-t-[95px] bg-board bg-cover bg-center bg-no-repeat text-center">
@@ -80,22 +91,11 @@ const AboutUs = () => {
             </p>
             <button
               className="text-logo-100 hover:underline sm:hidden"
-              onClick={() => handlesee}
+              onClick={() => setIsOpen((prev) => !prev)}
             >
-              {targ}
+              see more..
             </button>
-            <p className={`max-sm:${popo}`}>
-              easy to prepare meals at home to inspire our inner creator and
-              connect us with our love for cooking. Our goal is to make
-              home-cooked meals simple, enjoyable, and accessible for everyone.
-              By delivering fresh, pre-portioned ingredients and chef-designed
-              recipes, we empower busy individuals and families to prepare
-              delicious, nutritious meals without the stress of meal planning or
-              grocery shopping. We are committed to reducing food waste,
-              supporting sustainable sourcing, and offering diverse options that
-              cater to a variety of tastes and dietary needs, making healthy
-              eating a convenient and enjoyable part of everyday life.
-            </p>
+            <HiddenSee is={isOpen} />
           </div>
         </div>
       </section>
