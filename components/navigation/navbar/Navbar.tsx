@@ -56,7 +56,7 @@ const Navbar = () => {
         Login
       </button>
       {isPopupVisible && (
-        <div className="absolute bottom-[50px] left-2/4">
+        <div className="absolute left-[calc(50%-260px)] top-8 shadow-lg">
           <div>
             <div>
               <h2>Login</h2>
