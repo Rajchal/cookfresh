@@ -21,8 +21,12 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
     onPop(value);
   };
 
+  const clas = isPopupVisible ? "blur-sm" : "blur-0";
+
   return (
-    <nav className="flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12">
+    <nav
+      className={`${clas} flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12`}
+    >
       <Link href="/" className="flex gap-0">
         <Image
           src="/icons/ooo.svg"
@@ -59,14 +63,19 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
       <div className="flex-[25%]"></div>
 
       <button
-        onClick={togglePopup}
+        onClick={() => {
+          togglePopup();
+          parentPop(isPopupVisible);
+        }}
         className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
       >
         Login
       </button>
 
       {isPopupVisible && (
-        <div className="absolute left-[calc(50%-260px)] top-8 z-40 shadow-lg">
+        <div
+          className={`absolute left-[calc(50%-260px)] top-8 z-40 shadow-lg ${isPopupVisible ? "blur-none" : ""}`}
+        >
           <Login />
         </div>
       )}
