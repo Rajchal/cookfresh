@@ -6,18 +6,11 @@ import React, { useState } from "react";
 
 import Login from "@/components/Login";
 
-export const Checker = () => {
-  const [check, setCheck] = useState(false);
-  setCheck((pop) => !pop);
-  return check;
-};
-
 const Navbar = ({ isOpen }: { isOpen: boolean }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const togglePopup = () => {
     setIsPopupVisible(!isPopupVisible);
-    Checker();
   };
   return isOpen ? (
     isPopupVisible
