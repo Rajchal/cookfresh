@@ -6,12 +6,21 @@ import React, { useState } from "react";
 
 import Login from "@/components/Login";
 
-const Navbar = () => {
+interface ChildComponentProps {
+  onPop: (value: boolean) => void;
+}
+
+const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const togglePopup = () => {
     setIsPopupVisible(!isPopupVisible);
   };
+
+  const parentPop = (value: boolean) => {
+    onPop(value);
+  };
+
   return (
     <nav className="flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12">
       <Link href="/" className="flex gap-0">
