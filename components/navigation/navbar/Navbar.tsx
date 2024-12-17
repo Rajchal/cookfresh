@@ -6,13 +6,15 @@ import React, { useState } from "react";
 
 import Login from "@/components/Login";
 
-const Navbar = () => {
+const Navbar = ({ isOpen }: { isOpen: boolean }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const togglePopup = () => {
     setIsPopupVisible(!isPopupVisible);
   };
-  return (
+  return isOpen ? (
+    isPopupVisible
+  ) : (
     <nav className="flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12">
       <Link href="/" className="flex gap-0">
         <Image
@@ -55,15 +57,10 @@ const Navbar = () => {
       >
         Login
       </button>
+
       {isPopupVisible && (
-        <div className="absolute left-[calc(50%-260px)] top-8 shadow-lg">
-          <div>
-            <div>
-              <h2>Login</h2>
-              <button onClick={togglePopup}>Close</button>
-              <Login />
-            </div>
-          </div>
+        <div className="absolute left-[calc(50%-260px)] top-8 z-40 shadow-lg">
+          <Login />
         </div>
       )}
       <Link href="/signup">
