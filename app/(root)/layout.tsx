@@ -6,7 +6,7 @@ import Navbar from "@/components/navigation/navbar/Navbar";
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main>
-      <Navbar isOpen={false} />
+      <Navbar />
       {children}
       <Bottom />
     </main>

@@ -6,15 +6,13 @@ import React, { useState } from "react";
 
 import Login from "@/components/Login";
 
-const Navbar = ({ isOpen }: { isOpen: boolean }) => {
+const Navbar = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const togglePopup = () => {
     setIsPopupVisible(!isPopupVisible);
   };
-  return isOpen ? (
-    isPopupVisible
-  ) : (
+  return (
     <nav className="flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12">
       <Link href="/" className="flex gap-0">
         <Image
