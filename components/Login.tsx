@@ -7,7 +7,7 @@ import { LoginSchema } from "@/lib/validations";
 
 const Login = () => {
   return (
-    <section className="absolute min-w-full rounded-none border bg-white py-10 shadow-md sm:min-w-[520px] sm:px-8">
+    <section className="min-w-full rounded-none border bg-white py-10 shadow-md sm:min-w-[520px] sm:px-8">
       <AuthForm
         formType="login"
         schema={LoginSchema}

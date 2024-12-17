@@ -56,11 +56,13 @@ const Navbar = () => {
         Login
       </button>
       {isPopupVisible && (
-        <div>
+        <div className="absolute bottom-[50px] left-2/4">
           <div>
-            <h2>Login</h2>
-            <button onClick={togglePopup}>Close</button>
-            <Login />
+            <div>
+              <h2>Login</h2>
+              <button onClick={togglePopup}>Close</button>
+              <Login />
+            </div>
           </div>
         </div>
       )}
