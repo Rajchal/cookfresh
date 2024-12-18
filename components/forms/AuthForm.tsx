@@ -91,7 +91,7 @@ const AuthForm = <T extends FieldValues>({
           name={field as Path<T>}
           render={({ field }) => (
             <FormItem
-              className={`${butt} mx-auto flex w-[326px] items-center gap-2.5`}
+              className={`${butt} mx-auto flex w-[326px] items-center gap-2.5 max-sm:w-full`}
             >
               <div className="grow flex-wrap">
                 <FormControl>
@@ -105,7 +105,7 @@ const AuthForm = <T extends FieldValues>({
                           field.name.slice(1)
                     }
                     {...field}
-                    className="h-[59px] flex-wrap rounded-[5px] border-black text-[20px] placeholder:text-[20px]"
+                    className="h-[59px] flex-wrap rounded-[6px] border-black text-[20px] placeholder:text-[20px] max-sm:w-full "
                   />
                 </FormControl>
                 <FormMessage />
