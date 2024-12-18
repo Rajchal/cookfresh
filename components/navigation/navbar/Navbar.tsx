@@ -25,9 +25,9 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
 
   return (
     <nav
-      className={`${clas} flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12`}
+      className={` flex-between fixed z-50 w-full gap-5 bg-white p-3 shadow-md sm:px-12`}
     >
-      <Link href="/" className="flex gap-0">
+      <Link href="/" className={`${clas} flex gap-0`}>
         <Image
           src="/icons/ooo.svg"
           width={76.65}
