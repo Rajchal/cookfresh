@@ -105,7 +105,7 @@ const AuthForm = <T extends FieldValues>({
                           field.name.slice(1)
                     }
                     {...field}
-                    className="h-[59px] flex-wrap rounded-[6px] border-black text-[20px] placeholder:text-[20px] max-sm:w-full "
+                    className="h-[59px] flex-wrap rounded-[5px] border-black text-[20px] placeholder:text-[20px]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -116,21 +116,23 @@ const AuthForm = <T extends FieldValues>({
       ))}
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className="mx-auto flex  w-[326px] items-center gap-2.5"
+        className="mx-auto flex  w-[326px] items-center gap-2.5 max-sm:w-full"
       >
         <Button
           type="submit"
-          className=" h-[59px] w-full bg-logo-100 text-[24px] text-white hover:bg-green-900"
+          className=" h-[59px] w-full  bg-logo-100 text-[24px] text-white hover:bg-green-900"
         >
           {buttonType}
         </Button>
       </form>
-      <div className="mx-auto my-4 flex w-[326px] items-center">
+      <div className="mx-auto my-4 flex w-[326px] items-center max-sm:w-full">
         <hr className="grow border-t-[1.5px] border-or-100" />
         <span className="text-option px-2 text-or-100">or</span>
         <hr className="grow border-t-[1.5px] border-or-100" />
       </div>
-      <div className={`${butt} mx-auto flex  w-[326px] items-center gap-2.5`}>
+      <div
+        className={`${butt} mx-auto flex  w-[326px] items-center gap-2.5 max-sm:w-full`}
+      >
         <Button
           onClick={() => handleSignIn()}
           className="h-[59px] grow border border-black bg-white text-[20px] text-sigg-100 hover:bg-stone-300 hover:text-sigg-100"

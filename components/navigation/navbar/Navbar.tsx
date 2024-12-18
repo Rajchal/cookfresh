@@ -95,7 +95,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
         </div>
       )}
       {isPopupVisibleResiter && (
-        <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-0 ">
+        <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)] ">
           <Register />
         </div>
       )}
