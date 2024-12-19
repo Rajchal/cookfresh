@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import Link from "next/link";
 import { signIn } from "next-auth/react";
 import {
   DefaultValues,
@@ -65,16 +64,12 @@ const AuthForm = <T extends FieldValues>({
     formType === "login" ? (
       <>
         Don&apos;t have an account?{" "}
-        <Link href="/signup" className="text-logo-100 hover:underline">
-          Sign up
-        </Link>
+        <button className="text-logo-100 hover:underline">Sign up</button>
       </>
     ) : (
       <>
         Already have an account?{" "}
-        <Link href="/login" className="text-logo-100 hover:underline">
-          Log in
-        </Link>
+        <button className="text-logo-100 hover:underline">Log in</button>
       </>
     );
   return (
