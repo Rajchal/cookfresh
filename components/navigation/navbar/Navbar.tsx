@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
@@ -27,7 +27,17 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
   };
 
   const clas =
-    isPopupVisibleLogin || isPopupVisibleResiter ? "blur-sm" : "blur-0";
+    isPopupVisibleLogin || isPopupVisibleResiter
+      ? "blur-sm pointer-events-none"
+      : "blur-0";
+
+  useEffect(() => {
+    if (!isPopupVisibleLogin && !isPopupVisibleResiter) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isPopupVisibleLogin, isPopupVisibleResiter]);
 
   return (
     <>

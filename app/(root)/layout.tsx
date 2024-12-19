@@ -11,11 +11,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <main className={`${pop ? "overflow-hidden" : ""}`}>
+    <main>
       <Navbar onPop={handlePop} />
-      <div
-        className={`${pop ? "blur-0" : "blur-sm"} pointer-events-none snap-none`}
-      >
+      <div className={`${pop ? " blur-0" : "pointer-events-none blur-sm"} `}>
         {children}
         <Bottom />
       </div>
