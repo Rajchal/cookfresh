@@ -64,12 +64,16 @@ const AuthForm = <T extends FieldValues>({
     formType === "login" ? (
       <>
         Don&apos;t have an account?{" "}
-        <button className="text-logo-100 hover:underline">Sign up</button>
+        <button className="text-white " disabled>
+          Sign up
+        </button>
       </>
     ) : (
       <>
         Already have an account?{" "}
-        <button className="text-logo-100 hover:underline">Log in</button>
+        <button className="text-white" disabled>
+          Log in
+        </button>
       </>
     );
   return (

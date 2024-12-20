@@ -113,12 +113,45 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
           >
             x
           </button>
+          <button
+            onClick={() => {
+              togglePopupLogin();
+              parentPop(isPopupVisibleLogin);
+              togglePopupRegister();
+              parentPop(isPopupVisibleResiter);
+            }}
+            className="text-little absolute left-[calc(50%+68px)] top-[516px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%+40px)]"
+          >
+            Sign Up
+          </button>
         </>
       )}
       {isPopupVisibleResiter && (
-        <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)] ">
-          <Register />
-        </div>
+        <>
+          <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)] ">
+            <Register />
+          </div>
+          <button
+            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+100px)]"
+            onClick={() => {
+              togglePopupRegister();
+              parentPop(isPopupVisibleResiter);
+            }}
+          >
+            x
+          </button>
+          <button
+            onClick={() => {
+              togglePopupRegister();
+              parentPop(isPopupVisibleResiter);
+              togglePopupLogin();
+              parentPop(isPopupVisibleLogin);
+            }}
+            className="text-little absolute left-[calc(50%+83px)] top-[574px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%+40px)]"
+          >
+            Login
+          </button>
+        </>
       )}
     </>
   );
