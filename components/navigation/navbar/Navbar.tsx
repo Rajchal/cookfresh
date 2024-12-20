@@ -105,7 +105,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
             <Login />
           </div>
           <button
-            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+100px)]"
+            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupLogin();
               parentPop(isPopupVisibleLogin);
@@ -120,7 +120,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
               togglePopupRegister();
               parentPop(isPopupVisibleResiter);
             }}
-            className="text-little absolute left-[calc(50%+68px)] top-[516px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%+40px)]"
+            className="text-little absolute left-[calc(50%+68px)] top-[516px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-30px)] max-sm:top-[536px]"
           >
             Sign Up
           </button>
@@ -132,7 +132,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
             <Register />
           </div>
           <button
-            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+100px)]"
+            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupRegister();
               parentPop(isPopupVisibleResiter);
@@ -147,7 +147,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
               togglePopupLogin();
               parentPop(isPopupVisibleLogin);
             }}
-            className="text-little absolute left-[calc(50%+83px)] top-[574px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%+40px)]"
+            className="text-little absolute left-[calc(50%+83px)] top-[574px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-10px)] max-sm:top-[595px] "
           >
             Login
           </button>
