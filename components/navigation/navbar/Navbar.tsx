@@ -100,9 +100,12 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
         </button>
       </nav>
       {isPopupVisibleLogin && (
-        <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)]">
-          <Login />
-        </div>
+        <>
+          <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)]">
+            <Login />
+          </div>
+          <button onClick={togglePopupLogin}>Close</button>
+        </>
       )}
       {isPopupVisibleResiter && (
         <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)] ">
