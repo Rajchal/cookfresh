@@ -35,7 +35,10 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
     if (!isPopupVisibleLogin && !isPopupVisibleResiter) {
       document.body.style.overflow = "auto";
     } else {
-      document.body.style.overflow = "hidden";
+      const navbar = document.querySelector("nav");
+      if (navbar) {
+        navbar.style.overflow = "hidden";
+      }
     }
   }, [isPopupVisibleLogin, isPopupVisibleResiter]);
 
