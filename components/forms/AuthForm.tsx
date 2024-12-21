@@ -60,6 +60,7 @@ const AuthForm = <T extends FieldValues>({
   const handleSubmit: SubmitHandler<T> = async () => {};
   const buttonType = formType === "login" ? "Log in" : "Sign up";
   const butt = formType === "login" ? "mb-[30px]" : "mb-[10px]";
+  const fixOverflowIssue = formType === "login" ? "h-[59px]" : "h-[40px]";
   const tex =
     formType === "login" ? (
       <>
@@ -104,7 +105,7 @@ const AuthForm = <T extends FieldValues>({
                           field.name.slice(1)
                     }
                     {...field}
-                    className="h-[59px] flex-wrap rounded-[5px] border-black text-[20px] placeholder:text-[20px]"
+                    className={`${fixOverflowIssue} flex-wrap rounded-[5px] border-black text-[20px] placeholder:text-[20px]`}
                   />
                 </FormControl>
                 <FormMessage />
