@@ -35,13 +35,13 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
     if (!isPopupVisibleLogin && !isPopupVisibleResiter) {
       document.body.style.overflow = "auto";
     } else {
-      const navbar = document.querySelector("nav");
-      if (navbar) {
-        navbar.style.overflow = "hidden";
-      }
+      document.body.style.overflow = "hidden";
     }
   }, [isPopupVisibleLogin, isPopupVisibleResiter]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0 });
+  };
   return (
     <>
       <nav
@@ -84,6 +84,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
 
         <button
           onClick={() => {
+            scrollToTop();
             togglePopupLogin();
             parentPop(isPopupVisibleLogin);
           }}
@@ -94,6 +95,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
 
         <button
           onClick={() => {
+            scrollToTop();
             togglePopupRegister();
             parentPop(isPopupVisibleResiter);
           }}
