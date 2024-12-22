@@ -152,7 +152,7 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
               togglePopupLogin();
               parentPop(isPopupVisibleLogin);
             }}
-            className="text-little absolute left-[calc(50%+83px)] top-[574px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-10px)] max-sm:top-[595px] "
+            className="text-little absolute left-[calc(50%+83px)] top-[498px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-10px)] max-sm:top-[525px] "
           >
             Login
           </button>
