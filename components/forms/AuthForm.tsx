@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
+import { useState } from "react";
 import {
   DefaultValues,
   FieldValues,
@@ -57,6 +58,7 @@ const AuthForm = <T extends FieldValues>({
       });
     }
   };
+  const [focus, setFocus] = useState(false);
   const handleSubmit: SubmitHandler<T> = async () => {};
   const buttonType = formType === "login" ? "Log in" : "Sign up";
   const butt = formType === "login" ? "mb-[30px]" : "mb-[10px]";
@@ -93,7 +95,12 @@ const AuthForm = <T extends FieldValues>({
             <FormItem
               className={`${butt} mx-auto flex w-[326px] items-center gap-2.5 max-sm:w-full`}
             >
-              <div className="grow flex-wrap">
+              <div
+                className="grow flex-wrap"
+                onClick={() => {
+                  setFocus(true);
+                }}
+              >
                 <FormControl>
                   <Input
                     required
@@ -105,10 +112,12 @@ const AuthForm = <T extends FieldValues>({
                           field.name.slice(1)
                     }
                     {...field}
-                    className={`${fixOverflowIssue} flex-wrap rounded-[5px] border-black text-[20px] placeholder:text-[20px]`}
+                    className={`${fixOverflowIssue} flex-wrap rounded-[5px] text-[20px] placeholder:text-[20px]`}
                   />
                 </FormControl>
-                <FormMessage />
+                <div className={`${focus ? "hidden" : ""}`}>
+                  <FormMessage />
+                </div>
               </div>
             </FormItem>
           )}

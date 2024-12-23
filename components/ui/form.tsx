@@ -121,6 +121,7 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
+      className={`${error ? "border-red-500 border-[5px] border-double" : "border-black border-2"}`}
     />
   );
 });
@@ -162,7 +163,7 @@ const FormMessage = React.forwardRef<
       ref={ref}
       id={formMessageId}
       className={cn(
-        "absolute z-10 p-2 bg-white border border-red-500 rounded shadow-lg text-red-500 dark:bg-gray-800 dark:border-red-900 dark:text-red-900",
+        "absolute text-nowrap  z-10 p-2 bg-white border border-red-500 rounded shadow-lg text-red-500 dark:bg-gray-800 dark:border-red-900 dark:text-red-900",
         className
       )}
       {...props}
