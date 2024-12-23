@@ -125,6 +125,9 @@ const AuthForm = <T extends FieldValues>({
       ))}
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
+        onClick={() => {
+          setFocus(false);
+        }}
         className="mx-auto flex  w-[326px] items-center gap-2.5 max-sm:w-full"
       >
         <Button
