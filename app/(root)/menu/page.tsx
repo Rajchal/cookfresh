@@ -1,7 +1,5 @@
 import React from "react";
 
-import FetchMenu from "@/components/call/FetchMenu";
-
 const Menu = () => {
   return (
     <>
@@ -18,9 +16,6 @@ const Menu = () => {
           Search
         </button>
       </form>
-      <div>
-        <FetchMenu query="chicken" />
-      </div>
     </>
   );
 };
