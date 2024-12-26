@@ -18,7 +18,7 @@ Welcome to **CookFresh**, your go-to recipe finding website! Discover new recipe
 
 ## Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript, React
+- **Frontend**: HTML, CSS, JavaScript, React , Next Js
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
 
