@@ -7,11 +7,7 @@ import React, { useState, useEffect } from "react";
 import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
 
-interface ChildComponentProps {
-  onPop: (value: boolean) => void;
-}
-
-const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
+const Navbar: React.FC = () => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
@@ -20,10 +16,6 @@ const Navbar: React.FC<ChildComponentProps> = ({ onPop }) => {
   };
   const togglePopupRegister = () => {
     setIsPopupVisibleResiter(!isPopupVisibleResiter);
-  };
-
-  const parentPop = (value: boolean) => {
-    onPop(value);
   };
 
   const clas =
