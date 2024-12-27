@@ -75,7 +75,6 @@ const Navbar: React.FC = () => {
         <button
           onClick={() => {
             togglePopupLogin();
-            parentPop(isPopupVisibleLogin);
           }}
           className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
         >
@@ -85,7 +84,6 @@ const Navbar: React.FC = () => {
         <button
           onClick={() => {
             togglePopupRegister();
-            parentPop(isPopupVisibleResiter);
           }}
           className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 max-sm:hidden"
         >
@@ -101,7 +99,6 @@ const Navbar: React.FC = () => {
             className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupLogin();
-              parentPop(isPopupVisibleLogin);
             }}
           >
             x
@@ -109,9 +106,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => {
               togglePopupLogin();
-              parentPop(isPopupVisibleLogin);
               togglePopupRegister();
-              parentPop(isPopupVisibleResiter);
             }}
             className="text-little absolute left-[calc(50%+68px)] top-[516px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-30px)] max-sm:top-[536px]"
           >
@@ -128,7 +123,6 @@ const Navbar: React.FC = () => {
             className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupRegister();
-              parentPop(isPopupVisibleResiter);
             }}
           >
             x
@@ -136,9 +130,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => {
               togglePopupRegister();
-              parentPop(isPopupVisibleResiter);
               togglePopupLogin();
-              parentPop(isPopupVisibleLogin);
             }}
             className="text-little absolute left-[calc(50%+83px)] top-[498px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-10px)] max-sm:top-[525px] "
           >
