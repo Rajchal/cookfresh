@@ -12,10 +12,27 @@ const Navbar: React.FC = () => {
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
   const togglePopupLogin = () => {
-    setIsPopupVisibleLogin(!isPopupVisibleLogin);
+    setIsPopupVisibleLogin((prev) => !prev);
+    if (isPopupVisibleLogin) {
+      window.history.pushState(null, "", "/");
+    } else {
+      const query = new URLSearchParams(window.location.search);
+      query.set("lol", "login");
+      const newUrl = `${window.location.pathname}${query.toString().slice(4)}`;
+      window.history.pushState(null, "", newUrl);
+    }
   };
   const togglePopupRegister = () => {
-    setIsPopupVisibleResiter(!isPopupVisibleResiter);
+    setIsPopupVisibleResiter((prev) => !prev);
+    if (isPopupVisibleResiter) {
+      window.history.pushState(null, "", "/");
+    } else {
+      const query = new URLSearchParams(window.location.search);
+
+      query.set("lol", "register");
+      const newUrl = `${window.location.pathname}${query.toString().slice(4)}`;
+      window.history.pushState(null, "", newUrl);
+    }
   };
 
   const clas =
