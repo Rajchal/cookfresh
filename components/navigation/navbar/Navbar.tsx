@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = (handleSub) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
@@ -92,6 +92,9 @@ const Navbar: React.FC = () => {
         <button
           onClick={() => {
             togglePopupLogin();
+            handleSub("login", () => {
+              console.log("submited");
+            });
           }}
           className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
         >
