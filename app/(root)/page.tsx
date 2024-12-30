@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useCallback, useState } from "react";
 
@@ -8,11 +10,11 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   const [isBlur, setIsBlur] = useState(false);
   const handleBlur = useCallback(() => {
-    setIsBlur((isBlur) => !isBlur);
-  }, []);
+    setIsBlur(!isBlur);
+  }, [isBlur]);
   return (
     <main className={`${isBlur ? "blur" : ""}`}>
-      <Navbar handleBlur={handleBlur} />
+      <Navbar isBlur={isBlur} handleBlur={handleBlur} />
       <section className="border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px] ">
         <div className="text-data flex flex-col pl-[109.22px] pt-[71.8] text-logo-100 max-sm:pl-[20px]">
           <p>Easy meal kits.</p>

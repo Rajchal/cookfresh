@@ -8,10 +8,11 @@ import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
 
 interface NavbarProps {
+  isBlur: boolean;
   handleBlur: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
+const Navbar: React.FC<NavbarProps> = ({ isBlur, handleBlur }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
@@ -121,6 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
             className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupLogin();
+              handleBlur();
             }}
           >
             x
@@ -145,6 +147,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
             className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
             onClick={() => {
               togglePopupRegister();
+              handleBlur();
             }}
           >
             x
