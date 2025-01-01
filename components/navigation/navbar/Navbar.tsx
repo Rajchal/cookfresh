@@ -8,11 +8,10 @@ import Login from "@/components/auth/Login";
 import Register from "@/components/auth/Register";
 
 interface NavbarProps {
-  isBlur: boolean;
   handleBlur: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isBlur, handleBlur }) => {
+const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
