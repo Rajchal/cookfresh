@@ -106,6 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
         <button
           onClick={() => {
             togglePopupRegister();
+            handleBlur();
           }}
           className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 max-sm:hidden"
         >

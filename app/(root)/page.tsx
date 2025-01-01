@@ -14,7 +14,7 @@ export default function Home() {
   }, [isBlur]);
   return (
     <>
-      <Navbar isBlur={isBlur} handleBlur={handleBlur} />
+      <Navbar handleBlur={handleBlur} />
       <main className={`${isBlur ? "blur" : ""}`}>
         <section className="border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px] ">
           <div className="text-data flex flex-col pl-[109.22px] pt-[71.8] text-logo-100 max-sm:pl-[20px]">
