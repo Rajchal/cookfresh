@@ -79,6 +79,9 @@
   .text-tinku-mob {
     @apply text-[18px] font-[400] leading-[16px];
   }
+  .text-5 {
+    @apply text-[20px] font-[500] leading-[30px] text-[#1E1E1EB2];
+  }
   .flex-center {
     @apply flex justify-center items-center;
   }
