@@ -1,6 +1,40 @@
 import React from "react";
 
+import PrefOption from "@/components/preference/PrefOption";
+
 const page = () => {
+  const options = [
+    {
+      title: "Time-efficient",
+      desc: "Recipes designed to be cooked in 30 minutes",
+      image: "/images/clockPref.svg",
+      imagealt: "clock",
+    },
+    {
+      title: "Family-friendly",
+      desc: "Classic recipes that the whole family will love",
+      image: "/images/familyPref.svg",
+      imagealt: "family",
+    },
+    {
+      title: "Veggies",
+      desc: "Meat free recipes highlighting seasonal vegetables",
+      image: "/images/veggiePref.svg",
+      imagealt: "veggie",
+    },
+    {
+      title: "Calorie-efficient",
+      desc: "Recipes designed to be under 600 calories",
+      image: "/images/firePref.svg",
+      imagealt: "fire",
+    },
+    {
+      title: "Healthy",
+      desc: "Nutritionist-approved recipes that dont compromise on taste",
+      image: "/images/caloriePref.svg",
+      imagealt: "heart",
+    },
+  ];
   return (
     <>
       <section className="border border-t-[95px]">
@@ -15,7 +49,18 @@ const page = () => {
       <section className="flex items-center justify-center bg-[#FBF6EB]">
         <div className="my-24 h-[616px] w-[978px] bg-white">
           <div>
-            <p>Choose your preference</p>
+            <p className="text-browse text-logo-100">Choose your preference</p>
+            {options.map((option) => {
+              return (
+                <PrefOption
+                  key={option.title}
+                  title={option.title}
+                  desc={option.desc}
+                  image={option.image}
+                  imagealt={option.imagealt}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

@@ -79,20 +79,26 @@
   .text-tinku-mob {
     @apply text-[18px] font-[400] leading-[16px];
   }
-  .text-5 {
-    @apply text-[20px] font-[500] leading-[30px] text-[#1E1E1EB2];
+  .pref-1 {
+    @apply text-[14px] font-[400] leading-[12.88px];
   }
-  .flex-center {
-    @apply flex justify-center items-center;
+  .pref-2 {
+    @apply text-[12px] font-[400] leading-[13px] text-[#3E413CCC];
   }
+}
+.text-5 {
+  @apply text-[20px] font-[500] leading-[30px] text-[#1E1E1EB2];
+}
+.flex-center {
+  @apply flex justify-center items-center;
+}
 
-  .flex-between {
-    @apply flex justify-between items-center;
-  }
+.flex-between {
+  @apply flex justify-between items-center;
+}
 
-  .flex-start {
-    @apply flex justify-start items-center;
-  }
+.flex-start {
+  @apply flex justify-start items-center;
 }
 
 @layer base {
