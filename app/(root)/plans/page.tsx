@@ -13,7 +13,11 @@ const page = () => {
         </h2>
       </section>
       <section className="flex items-center justify-center bg-[#FBF6EB]">
-        <div className="my-24 h-[616px] w-[978px] bg-white"></div>
+        <div className="my-24 h-[616px] w-[978px] bg-white">
+          <div>
+            <p>Choose your preference</p>
+          </div>
+        </div>
       </section>
     </>
   );
