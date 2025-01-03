@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .server {
+    @apply text-[22px] font-[400] leading-[20.24px];
+  }
   .text-logo {
     @apply text-[26px] font-[400] leading-[34.97px];
   }

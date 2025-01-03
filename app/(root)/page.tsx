@@ -67,10 +67,7 @@ export default function Home() {
               </p>
               <div className="text-little mb-5 flex max-sm:text-xl">
                 {`for as little as\u00A0`}
-                <p className="text-price text-logo-100 max-sm:text-xl">
-                  {" "}
-                  $5.99
-                </p>
+                <p className="text-price text-logo-100 max-sm:text-xl">$5.99</p>
               </div>
               <Button className="rounded-full bg-logo-100  p-7 text-[24px] font-[400] text-white hover:bg-green-900">
                 Start your plan
