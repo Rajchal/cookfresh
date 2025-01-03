@@ -56,9 +56,9 @@ const Plans = () => {
           </h2>
         </section>
         <section className="flex items-center justify-center bg-[#FBF6EB]">
-          <div className="my-24 h-[616px] w-[978px] bg-white">
-            <div>
-              <p className="text-browse text-logo-100">
+          <div className="my-24 h-[716px] w-[978px] bg-white">
+            <div className="w-[514px] p-24">
+              <p className="text-browse pb-8 text-logo-100">
                 Choose your preference
               </p>
               {options.map((option) => {
@@ -72,6 +72,10 @@ const Plans = () => {
                   />
                 );
               })}
+              <p className="pref-2 text-center  ">
+                The full menu will be available to you. Selecting these
+                preferences will help us to perdonalize your experience.
+              </p>
             </div>
           </div>
         </section>

@@ -19,7 +19,7 @@ const PrefOption = ({ title, desc, image, imagealt }: PrefOptionProps) => {
         height={35}
       />
       <div className="flex flex-col justify-center pl-3">
-        <h3 className="pref-1">{title}</h3>
+        <h3 className="pref-1 pb-2">{title}</h3>
         <p className="pref-2">{desc}</p>
       </div>
     </button>
