@@ -8,6 +8,16 @@ import Selectdays from "@/components/selectdays/selectdays";
 import PlanButton from "@/components/ui/planbutton";
 
 const Plans = () => {
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const [isSelect, setIsSelect] = useState(Array<boolean>(7).fill(false));
   const [selectServe, setSelectServe] = useState("1");
   const [selectMeal, setSelectMeal] = useState("3");
   const [isBlur, setIsBlur] = useState(false);
@@ -46,6 +56,11 @@ const Plans = () => {
       imagealt: "heart",
     },
   ];
+  const handleSelected = (data: number) => {
+    const newSelected = [...isSelect];
+    newSelected[data] = !newSelected[data];
+    setIsSelect(newSelected);
+  };
   const setServeHandler = (value: string) => {
     if (value === "1") {
       setSelectServe("1");
@@ -155,7 +170,24 @@ const Plans = () => {
           </div>
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />
         </section>
-        <Selectdays />
+        <div className="sticky bottom-[calc(50%-205px)] left-[calc(50%-205px)] z-50 h-[435px] w-[410px]  bg-white p-5">
+          <h1 className="text-browse text-center text-logo-100">
+            Select your days
+          </h1>
+          <div className="  flex flex-wrap gap-2 p-5">
+            {days.map((day) => {
+              return (
+                <Selectdays
+                  key={days.indexOf(day)}
+                  day={days.indexOf(day)}
+                  dayName={day}
+                  isSelected={isSelect}
+                  handleSelected={() => handleSelected(days.indexOf(day))}
+                />
+              );
+            })}
+          </div>
+        </div>
       </main>
     </>
   );
