@@ -7,6 +7,8 @@ import PrefOption from "@/components/preference/PrefOption";
 import PlanButton from "@/components/ui/planbutton";
 
 const Plans = () => {
+  const [selectServe, setSelectServe] = useState("1");
+  const [selectMeal, setSelectMeal] = useState("3");
   const [isBlur, setIsBlur] = useState(false);
   const handleBlur = useCallback(() => {
     setIsBlur(!isBlur);
@@ -43,6 +45,24 @@ const Plans = () => {
       imagealt: "heart",
     },
   ];
+  const setServeHandler = (value: string) => {
+    if (value === "1") {
+      setSelectServe("1");
+    } else if (value === "2") {
+      setSelectServe("2");
+    }
+  };
+  const setMealHandler = (value: string) => {
+    if (value === "3") {
+      setSelectMeal("3");
+    } else if (value === "4") {
+      setSelectMeal("4");
+    } else if (value === "5") {
+      setSelectMeal("5");
+    } else if (value === "6") {
+      setSelectMeal("6");
+    }
+  };
   return (
     <>
       <Navbar handleBlur={handleBlur} />
@@ -58,7 +78,7 @@ const Plans = () => {
         </section>
         <section className="flex items-center justify-center bg-[#FBF6EB]">
           <div className="my-24 flex h-[716px] w-[978px] bg-white ">
-            <div className="w-[500px] p-24">
+            <div className="w-[500px] basis-1/2 p-24">
               <h1 className="text-browse pb-8 text-center text-logo-100">
                 Choose your preference
               </h1>
@@ -78,33 +98,60 @@ const Plans = () => {
                 preferences will help us to perdonalize your experience.
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center p-24">
+            <div className="flex basis-1/2 flex-col items-center justify-center  ">
               <h1 className="text-browse pb-8 text-center text-logo-100">
                 Select your plan
               </h1>
 
-              <div className="flex ">
-                <h2 className="server text-nowrap ">Serving per meal</h2>
-                <PlanButton data="1" sizeX="w-[103px]" isSelect={true} />
-                <PlanButton data="2" sizeX="w-[103px]" isSelect={false} />
-              </div>
-              <div className="flex">
-                <h2 className="server text-nowrap ">Meals per week</h2>
+              <div className="mb-2 flex">
+                <h2 className="server text-nowrap pr-[15px]">
+                  Serving per meal
+                </h2>
                 <PlanButton
                   data="1"
-                  sizeX="w-[51.5px] ml-[31px]"
-                  isSelect={true}
+                  sizeX="w-[103px]"
+                  isSelect={selectServe === "1"}
+                  setSelectHandler={() => setServeHandler("1")}
                 />
-                <PlanButton data="2" sizeX="w-[51.5px]" isSelect={false} />
-                <PlanButton data="3" sizeX="w-[51.5px]" isSelect={false} />
-                <PlanButton data="4" sizeX="w-[51.5px]" isSelect={false} />
+                <PlanButton
+                  data="2"
+                  sizeX="w-[103px]"
+                  isSelect={selectServe === "2"}
+                  setSelectHandler={() => setServeHandler("2")}
+                />
               </div>
-              <button className="textDays text-logo-100 hover:underline ">
+              <div className="mb-2 flex">
+                <h2 className="server text-nowrap ">Meals per week</h2>
+                <PlanButton
+                  data="3"
+                  sizeX="w-[51.5px] ml-[31px]"
+                  isSelect={selectMeal === "3"}
+                  setSelectHandler={() => setMealHandler("3")}
+                />
+                <PlanButton
+                  data="4"
+                  sizeX="w-[51.5px]"
+                  isSelect={selectMeal === "4"}
+                  setSelectHandler={() => setMealHandler("4")}
+                />
+                <PlanButton
+                  data="5"
+                  sizeX="w-[51.5px]"
+                  isSelect={selectMeal === "5"}
+                  setSelectHandler={() => setMealHandler("5")}
+                />
+                <PlanButton
+                  data="6"
+                  sizeX="w-[51.5px]"
+                  isSelect={selectMeal === "6"}
+                  setSelectHandler={() => setMealHandler("6")}
+                />
+              </div>
+              <button className="textDays ml-40 text-logo-100 hover:underline ">
                 Select you days
               </button>
             </div>
           </div>
-
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />
         </section>
       </main>
