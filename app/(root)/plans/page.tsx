@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
 import PrefOption from "@/components/preference/PrefOption";
+import Selectdays from "@/components/selectdays/selectdays";
 import PlanButton from "@/components/ui/planbutton";
 
 const Plans = () => {
@@ -154,6 +155,7 @@ const Plans = () => {
           </div>
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />
         </section>
+        <Selectdays />
       </main>
     </>
   );

@@ -15,7 +15,7 @@ const PlanButton = ({
 }: planButtonProps) => {
   return (
     <button
-      className={`${isSelect ? "text-white bg-logo-100 " : "text-logo-100 bg-white  hover:bg-[#CCCCCC]  "} h-[35px] border border-logo-100 ${sizeX}  `}
+      className={`${isSelect ? "text-white bg-logo-100 " : "text-logo-100 bg-white  hover:bg-[#CCCCCC]"} h-[35px] border border-logo-100 ${sizeX}  `}
       onClick={() => setSelectHandler(data)}
     >
       {data}
