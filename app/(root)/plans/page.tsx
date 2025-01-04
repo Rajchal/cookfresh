@@ -24,6 +24,7 @@ const Plans = () => {
   const handleBlur = useCallback(() => {
     setIsBlur(!isBlur);
   }, [isBlur]);
+  const [isBlurr, setIsBlurr] = useState(false);
   const options = [
     {
       title: "Time-efficient",
@@ -81,8 +82,10 @@ const Plans = () => {
   };
   return (
     <>
-      <Navbar handleBlur={handleBlur} />
-      <main className={`${isBlur ? "blur" : ""}`}>
+      <Navbar handleBlur={handleBlur} blurr={isBlurr} />
+      <main
+        className={`${isBlur || isBlurr ? "pointer-events-none overflow-hidden blur" : ""}`}
+      >
         <section className={`border border-t-[95px]`}>
           <h1 className="text-week pt-16 text-center text-logo-100">
             Personalize your meal subscription
@@ -163,18 +166,24 @@ const Plans = () => {
                   setSelectHandler={() => setMealHandler("6")}
                 />
               </div>
-              <button className="textDays ml-40 text-logo-100 hover:underline ">
+              <button
+                className="textDays ml-40 text-logo-100 hover:underline "
+                onClick={() => setIsBlurr((prev) => !prev)}
+              >
                 Select you days
               </button>
             </div>
           </div>
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />
         </section>
-        <div className="sticky bottom-[calc(50%-205px)] left-[calc(50%-205px)] z-50 h-[435px] w-[410px]  bg-white p-5">
+      </main>
+
+      {isBlurr && (
+        <div className="sticky bottom-[calc(50%-205px)] left-[calc(50%-205px)] z-50 flex h-[435px] w-[410px] flex-col items-center justify-center border bg-white  p-5 shadow-md">
           <h1 className="text-browse text-center text-logo-100">
             Select your days
           </h1>
-          <div className="  flex flex-wrap gap-2 p-5">
+          <div className="  my-5 flex flex-wrap gap-2 p-5">
             {days.map((day) => {
               return (
                 <Selectdays
@@ -187,8 +196,15 @@ const Plans = () => {
               );
             })}
           </div>
+
+          <button
+            className="w-[144px] bg-logo-100 p-2 text-white hover:bg-green-900"
+            onClick={() => setIsBlurr((prev) => !prev)}
+          >
+            Confirm
+          </button>
         </div>
-      </main>
+      )}
     </>
   );
 };

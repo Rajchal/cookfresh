@@ -9,9 +9,10 @@ import Register from "@/components/auth/Register";
 
 interface NavbarProps {
   handleBlur: () => void;
+  blurr?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
+const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
@@ -40,18 +41,18 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur }) => {
   };
 
   const clas =
-    isPopupVisibleLogin || isPopupVisibleResiter
+    isPopupVisibleLogin || isPopupVisibleResiter || blurr
       ? "blur-sm pointer-events-none"
       : "blur-0";
 
   useEffect(() => {
-    if (!isPopupVisibleLogin && !isPopupVisibleResiter) {
+    if (!isPopupVisibleLogin && !isPopupVisibleResiter && !blurr) {
       document.body.style.overflow = "auto";
     } else {
       window.scrollTo({ top: 0, left: 0 });
       document.body.style.overflow = "hidden";
     }
-  }, [isPopupVisibleLogin, isPopupVisibleResiter]);
+  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr]);
 
   return (
     <>
