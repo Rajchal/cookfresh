@@ -1,6 +1,11 @@
 import React from "react";
 
-const Selectdays = () => {
+interface SelectdaysProps {
+  isSelected: string[];
+  setIsSelected: (data: string) => void;
+}
+
+const Selectdays = ({ isSelected, setIsSelected }: SelectdaysProps) => {
   const days = [
     "Sunday",
     "Monday",
@@ -17,7 +22,8 @@ const Selectdays = () => {
         {days.map((day) => (
           <button
             key={day}
-            className="textDays w-[114px] grow border p-3 text-logo-100 hover:underline"
+            className={`${isSelected.includes(day)} textDays w-[114px] grow border p-3 text-logo-100 hover:underline`}
+            onClick={() => setIsSelected(day)}
           >
             {day}
           </button>
