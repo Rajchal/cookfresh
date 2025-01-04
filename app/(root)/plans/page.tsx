@@ -78,17 +78,31 @@ const Plans = () => {
                 preferences will help us to perdonalize your experience.
               </p>
             </div>
-            <div className=" ">
+            <div className="flex flex-col items-center justify-center p-24">
               <h1 className="text-browse pb-8 text-center text-logo-100">
                 Select your plan
               </h1>
-              <div className="flex items-center justify-center ">
-                <h2 className="server pr-4">Serving per meal</h2>
+
+              <div className="flex ">
+                <h2 className="server text-nowrap ">Serving per meal</h2>
                 <PlanButton data="1" sizeX="w-[103px]" isSelect={true} />
                 <PlanButton data="2" sizeX="w-[103px]" isSelect={false} />
               </div>
+              <div className="flex">
+                <h2 className="server text-nowrap ">Meals per week</h2>
+                <PlanButton
+                  data="1"
+                  sizeX="w-[51.5px] ml-[31px]"
+                  isSelect={true}
+                />
+                <PlanButton data="2" sizeX="w-[51.5px]" isSelect={false} />
+                <PlanButton data="3" sizeX="w-[51.5px]" isSelect={false} />
+                <PlanButton data="4" sizeX="w-[51.5px]" isSelect={false} />
+              </div>
+              <button className="textDays text-logo-100 hover:underline ">
+                Select you days
+              </button>
             </div>
-            <div></div>
           </div>
 
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />

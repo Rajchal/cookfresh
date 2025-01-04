@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .textDays {
+    @apply text-[18px] font-[400] leading-[16.56px];
+  }
   .server {
     @apply text-[22px] font-[400] leading-[20.24px];
   }

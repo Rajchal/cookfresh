@@ -21,9 +21,11 @@ export default function Home() {
             <p>Easy meal kits.</p>
             <p>Fresh ingredients</p>
             <p>Fast delivery.</p>
-            <Button className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900">
-              Start your plan
-            </Button>
+            <a href="/plans">
+              <Button className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900">
+                Start your plan
+              </Button>
+            </a>
           </div>
         </section>
         <section className="mt-28 flex items-center justify-center max-mainClash:flex-col">

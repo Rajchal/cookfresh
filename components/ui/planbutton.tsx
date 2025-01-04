@@ -9,7 +9,7 @@ interface planButtonProps {
 const PlanButton = ({ data, sizeX, isSelect }: planButtonProps) => {
   return (
     <button
-      className={`${isSelect ? "text-white bg-logo-100 " : "text-logo-100 bg-white"} h-[35px] ${sizeX} hover:text-white hover:bg-logo-100`}
+      className={`${isSelect ? "text-white bg-logo-100 " : "text-logo-100 bg-white"} h-[35px] border border-logo-100 ${sizeX} hover:text-white hover:bg-logo-100`}
     >
       {data}
     </button>
