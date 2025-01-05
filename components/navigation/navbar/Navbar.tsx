@@ -16,6 +16,21 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
 
+  const closePopup = () => {
+    setIsPopupVisibleLogin(false);
+    setIsPopupVisibleResiter(false);
+    handleBlur();
+  };
+  const gotoLogin = () => {
+    togglePopupRegister();
+    togglePopupLogin();
+  };
+
+  const gotoSignUp = () => {
+    togglePopupLogin();
+    togglePopupRegister();
+  };
+
   const togglePopupLogin = () => {
     setIsPopupVisibleLogin((prev) => !prev);
   };
@@ -98,13 +113,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
       </nav>
 
       {isPopupVisibleLogin && (
-        <div className="bordermax-sm:left-[calc(50%-140px)] fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center ">
-          <Login />
+        <div className="fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center max-sm:left-[calc(50%-140px)] ">
+          <Login gotoSignUp={gotoSignUp} closePopup={closePopup} />
         </div>
       )}
       {isPopupVisibleResiter && (
         <div className="fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center  max-sm:left-[calc(50%-140px)]">
-          <Register />
+          <Register gotLogin={gotoLogin} closePopup={closePopup} />
         </div>
       )}
     </>

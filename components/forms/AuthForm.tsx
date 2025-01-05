@@ -30,6 +30,9 @@ interface AuthFormProps<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T;
   onSubmit: (values: T) => Promise<{ success: boolean }>;
+  gotoLogin?: () => void;
+  gotoSignUp?: () => void;
+  closePopup: () => void;
 }
 
 const AuthForm = <T extends FieldValues>({
@@ -38,6 +41,9 @@ const AuthForm = <T extends FieldValues>({
   defaultValues,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onSubmit,
+  gotoLogin,
+  gotoSignUp,
+  closePopup,
 }: AuthFormProps<T>) => {
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
@@ -66,15 +72,15 @@ const AuthForm = <T extends FieldValues>({
   const tex =
     formType === "login" ? (
       <>
-        Don&apos;t have an account?{" "}
-        <button className="text-white " disabled>
+        Don&apos;t have an account?
+        <button className="text-logo-100 hover:underline" onClick={gotoSignUp}>
           Sign up
         </button>
       </>
     ) : (
       <>
-        Already have an account?{" "}
-        <button className="text-white" disabled>
+        Already have an account?
+        <button className="text-logo-100 hover:underline" onClick={gotoLogin}>
           Log in
         </button>
       </>
@@ -85,6 +91,12 @@ const AuthForm = <T extends FieldValues>({
         <h1 className="text-login grow text-center text-logo-100">
           {buttonType}
         </h1>
+        <button
+          className="text-5xl text-red-600 hover:text-red-800 hover:underline"
+          onClick={closePopup}
+        >
+          x
+        </button>
       </div>
       {Object.keys(defaultValues).map((field) => (
         <FormField
