@@ -18,26 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
 
   const togglePopupLogin = () => {
     setIsPopupVisibleLogin((prev) => !prev);
-    if (isPopupVisibleLogin) {
-      window.history.pushState(null, "", "/");
-    } else {
-      const query = new URLSearchParams(window.location.search);
-      query.set("lol", "login");
-      const newUrl = `${window.location.pathname}${query.toString().slice(4)}`;
-      window.history.pushState(null, "", newUrl);
-    }
   };
   const togglePopupRegister = () => {
     setIsPopupVisibleResiter((prev) => !prev);
-    if (isPopupVisibleResiter) {
-      window.history.pushState(null, "", "/");
-    } else {
-      const query = new URLSearchParams(window.location.search);
-
-      query.set("lol", "register");
-      const newUrl = `${window.location.pathname}${query.toString().slice(4)}`;
-      window.history.pushState(null, "", newUrl);
-    }
   };
 
   const clas =
@@ -49,7 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     if (!isPopupVisibleLogin && !isPopupVisibleResiter && !blurr) {
       document.body.style.overflow = "auto";
     } else {
-      window.scrollTo({ top: 0, left: 0 });
       document.body.style.overflow = "hidden";
     }
   }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr]);
@@ -116,54 +98,14 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
       </nav>
 
       {isPopupVisibleLogin && (
-        <>
-          <div className="absolute left-[calc(50%-260px)] top-8 z-50  shadow-lg max-sm:left-[calc(50%-140px)]">
-            <Login />
-          </div>
-          <button
-            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
-            onClick={() => {
-              togglePopupLogin();
-              handleBlur();
-            }}
-          >
-            x
-          </button>
-          <button
-            onClick={() => {
-              togglePopupLogin();
-              togglePopupRegister();
-            }}
-            className="text-little absolute left-[calc(50%+68px)] top-[516px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-30px)] max-sm:top-[536px]"
-          >
-            Sign Up
-          </button>
-        </>
+        <div className="bordermax-sm:left-[calc(50%-140px)] fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center ">
+          <Login />
+        </div>
       )}
       {isPopupVisibleResiter && (
-        <>
-          <div className="absolute left-[calc(50%-260px)] top-8 z-50 shadow-lg max-sm:left-[calc(50%-140px)] ">
-            <Register />
-          </div>
-          <button
-            className="absolute left-[calc(50%+200px)] top-8 z-50 p-3 text-5xl text-red-600 hover:text-red-800 hover:underline max-sm:left-[calc(50%+90px)]"
-            onClick={() => {
-              togglePopupRegister();
-              handleBlur();
-            }}
-          >
-            x
-          </button>
-          <button
-            onClick={() => {
-              togglePopupRegister();
-              togglePopupLogin();
-            }}
-            className="text-little absolute left-[calc(50%+83px)] top-[498px] z-50 text-logo-100 hover:underline max-sm:left-[calc(50%-10px)] max-sm:top-[525px] "
-          >
-            Login
-          </button>
-        </>
+        <div className="fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center  max-sm:left-[calc(50%-140px)]">
+          <Register />
+        </div>
       )}
     </>
   );

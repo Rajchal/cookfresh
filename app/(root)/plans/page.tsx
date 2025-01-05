@@ -179,7 +179,7 @@ const Plans = () => {
       </main>
 
       {isBlurr && (
-        <div className="sticky bottom-[calc(50%-205px)] left-[calc(50%-205px)] z-50 flex h-[435px] w-[410px] flex-col items-center justify-center border bg-white  p-5 shadow-md">
+        <div className="fixed bottom-[calc(50%-205px)] left-[calc(50%-205px)] z-50 flex h-[435px] w-[410px] flex-col items-center justify-center border bg-white  p-5 shadow-md">
           <h1 className="text-browse text-center text-logo-100">
             Select your days
           </h1>
