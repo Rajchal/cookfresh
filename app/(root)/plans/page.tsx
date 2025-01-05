@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import CountUp from "react-countup";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
 import PrefOption from "@/components/preference/PrefOption";
@@ -8,6 +9,15 @@ import Selectdays from "@/components/selectdays/selectdays";
 import PlanButton from "@/components/ui/planbutton";
 
 const Plans = () => {
+  const sPrice = 20;
+  const [servePrice, setServePrice] = useState(sPrice * 1 * 3);
+  const discountRate = 5;
+  const [shippingPrice, setShippingPrice] = useState(10);
+  const shippingDiscount = 2;
+  const finalservingPrice = servePrice - (discountRate / 100) * servePrice;
+  const finalshippingPrice =
+    shippingPrice - (shippingDiscount / 100) * shippingPrice;
+
   const days = [
     "Sunday",
     "Monday",
@@ -72,12 +82,16 @@ const Plans = () => {
   const setMealHandler = (value: string) => {
     if (value === "3") {
       setSelectMeal("3");
+      setServePrice(sPrice * 3);
     } else if (value === "4") {
       setSelectMeal("4");
+      setServePrice(sPrice * 4);
     } else if (value === "5") {
       setSelectMeal("5");
+      setServePrice(sPrice * 5);
     } else if (value === "6") {
       setSelectMeal("6");
+      setServePrice(sPrice * 6);
     }
   };
   return (
@@ -172,6 +186,70 @@ const Plans = () => {
               >
                 Select you days
               </button>
+              <div className="mt-4 w-[399px] rounded-lg bg-[#FBF6EBE5] px-10 py-5">
+                <h1 className="text-sign2  pb-3 text-logo-100">
+                  Order Summary
+                </h1>
+                <span className="grid grid-cols-3 gap-10 p-1">
+                  <h2 className="text-descp text-nowrap text-[#3E413C]">
+                    Price of serving
+                  </h2>
+                  <CountUp
+                    end={servePrice}
+                    duration={1}
+                    decimals={2}
+                    prefix="$"
+                    className="text-descp  text-[#3E413C] line-through"
+                  />
+                  <CountUp
+                    end={finalservingPrice}
+                    duration={1}
+                    decimals={2}
+                    prefix="$"
+                    className="text-descp text-[#3E413C]"
+                  />
+                </span>
+
+                <span className="grid grid-cols-3 gap-10 p-1">
+                  <h2 className="text-descp text-[#3E413C]">Shipping</h2>
+
+                  <CountUp
+                    end={shippingPrice}
+                    duration={1}
+                    decimals={2}
+                    prefix="$"
+                    className="text-descp  text-[#3E413C] line-through"
+                  />
+                  <CountUp
+                    end={finalshippingPrice}
+                    duration={1}
+                    decimals={2}
+                    prefix="$"
+                    className="text-descp text-[#3E413C]"
+                  />
+                </span>
+
+                <span className="grid grid-cols-3 gap-10 p-1">
+                  <h2 className="text-descp  text-nowrap text-[#3E413C]">
+                    Total price
+                  </h2>
+
+                  <CountUp
+                    end={servePrice + shippingPrice}
+                    duration={1}
+                    decimals={2}
+                    prefix="$"
+                    className="text-descp  text-[#3E413C] line-through"
+                  />
+                  <CountUp
+                    end={finalservingPrice + finalshippingPrice}
+                    duration={1.5}
+                    decimals={2}
+                    prefix="$"
+                    className=" textDays2 text-logo-100"
+                  />
+                </span>
+              </div>
             </div>
           </div>
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />

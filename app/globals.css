@@ -6,6 +6,9 @@
   .textDays {
     @apply text-[18px] font-[400] leading-[16.56px];
   }
+  .textDays2 {
+    @apply text-[18px] font-[600] leading-[16.56px];
+  }
   .server {
     @apply text-[22px] font-[400] leading-[20.24px];
   }
@@ -60,6 +63,9 @@
   }
   .text-sign {
     @apply text-[20px] font-[400] leading-[18.4px] align-middle;
+  }
+  .text-sign2 {
+    @apply text-[20px] font-[500] leading-[18.4px] align-middle;
   }
   .text-descp {
     @apply text-[16px] font-[400] leading-[14.72px];
