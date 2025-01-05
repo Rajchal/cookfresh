@@ -75,23 +75,33 @@ const Plans = () => {
   const setServeHandler = (value: string) => {
     if (value === "1") {
       setSelectServe("1");
+      setServePrice((prev) => prev / 2);
     } else if (value === "2") {
       setSelectServe("2");
+      setServePrice((prev) => prev * 2);
     }
   };
   const setMealHandler = (value: string) => {
     if (value === "3") {
       setSelectMeal("3");
-      setServePrice(sPrice * 3);
+      setServePrice(() =>
+        selectServe === "2" ? sPrice * 2 * 3 : sPrice * 1 * 3
+      );
     } else if (value === "4") {
       setSelectMeal("4");
-      setServePrice(sPrice * 4);
+      setServePrice(() =>
+        selectServe === "2" ? sPrice * 2 * 4 : sPrice * 1 * 4
+      );
     } else if (value === "5") {
       setSelectMeal("5");
-      setServePrice(sPrice * 5);
+      setServePrice(() =>
+        selectServe === "2" ? sPrice * 2 * 5 : sPrice * 1 * 5
+      );
     } else if (value === "6") {
       setSelectMeal("6");
-      setServePrice(sPrice * 6);
+      setServePrice(() =>
+        selectServe === "2" ? sPrice * 2 * 6 : sPrice * 1 * 6
+      );
     }
   };
   return (
@@ -128,11 +138,11 @@ const Plans = () => {
               })}
               <p className="pref-2 pt-3 text-center ">
                 The full menu will be available to you. Selecting these
-                preferences will help us to perdonalize your experience.
+                preferences will help us to personalize your experience.
               </p>
             </div>
-            <div className="flex basis-1/2 flex-col items-center justify-center  ">
-              <h1 className="text-browse pb-8 text-center text-logo-100">
+            <div className="flex basis-1/2 flex-col items-center   ">
+              <h1 className="text-browse p-24 pb-8 text-center text-logo-100">
                 Select your plan
               </h1>
 
@@ -186,7 +196,7 @@ const Plans = () => {
               >
                 Select you days
               </button>
-              <div className="mt-4 w-[399px] rounded-lg bg-[#FBF6EBE5] px-10 py-5">
+              <div className="my-9 w-[399px] rounded-lg bg-[#FBF6EBE5] px-10 py-5">
                 <h1 className="text-sign2  pb-3 text-logo-100">
                   Order Summary
                 </h1>
@@ -250,6 +260,12 @@ const Plans = () => {
                   />
                 </span>
               </div>
+              <h2 className="textDays w-[300px] text-wrap p-6 text-center text-[#3E413CB2]">
+                Now you can browse our menu to order for this week
+              </h2>
+              <button className="textDays2 rounded-full bg-[#8DD375] px-8 py-4 text-white hover:bg-logo-100">
+                Continue
+              </button>
             </div>
           </div>
           <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[519px] w-[3px] bg-kairo-100 max-footClash:hidden" />
