@@ -35,38 +35,51 @@ const Plans = () => {
     setIsBlur(!isBlur);
   }, [isBlur]);
   const [isBlurr, setIsBlurr] = useState(false);
+  const [isPrefSelected, setIsPrefSelected] = useState(
+    Array<boolean>(5).fill(false)
+  );
   const options = [
     {
+      number: 1,
       title: "Time-efficient",
       desc: "Recipes designed to be cooked in 30 minutes",
       image: "/images/clockPref.svg",
       imagealt: "clock",
     },
     {
+      number: 2,
       title: "Family-friendly",
       desc: "Classic recipes that the whole family will love",
       image: "/images/familyPref.svg",
       imagealt: "family",
     },
     {
+      number: 3,
       title: "Veggies",
       desc: "Meat free recipes highlighting seasonal vegetables",
       image: "/images/veggiePref.svg",
       imagealt: "veggie",
     },
     {
+      number: 4,
       title: "Calorie-efficient",
       desc: "Recipes designed to be under 600 calories",
       image: "/images/firePref.svg",
       imagealt: "fire",
     },
     {
+      number: 5,
       title: "Healthy",
       desc: "Nutritionist-approved recipes that dont compromise on taste",
       image: "/images/caloriePref.svg",
       imagealt: "heart",
     },
   ];
+  const handlePrefSelected = (data: number) => {
+    const newSelected = [...isPrefSelected];
+    newSelected[data] = !newSelected[data];
+    setIsPrefSelected(newSelected);
+  };
   const handleSelected = (data: number) => {
     const newSelected = [...isSelect];
     newSelected[data] = !newSelected[data];
@@ -129,10 +142,13 @@ const Plans = () => {
                 return (
                   <PrefOption
                     key={option.title}
+                    number={option.number}
                     title={option.title}
                     desc={option.desc}
                     image={option.image}
                     imagealt={option.imagealt}
+                    isPrefSelected={isPrefSelected}
+                    setIsPrefSelected={() => handlePrefSelected(option.number)}
                   />
                 );
               })}
