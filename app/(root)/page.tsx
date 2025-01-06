@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import { Swiper } from "@/components/swiper/Swiper";
 import { Button } from "@/components/ui/button";
+import WeeklyOption from "@/components/weekly/WeeklyOption";
 
 export default function Home() {
   const [isBlur, setIsBlur] = useState(false);
@@ -50,17 +51,11 @@ export default function Home() {
             className="max-mainClash:[w-[727.89px]] h-[274.48px] w-[627.89px] object-cover shadow-md max-mainClash:h-[314.48]"
           />
         </section>
-        <section className="mt-28 flex flex-col items-center justify-center bg-sec-100 text-center">
-          <div className="p-8 ">
-            <p className="text-week text-logo-100">Choose From </p>
-            <p className="text-w-option text-logo-100 ">20+ Weekly Options</p>
-          </div>
-          <Swiper />
 
-          <Button className="mt-10 rounded-full border-4 border-logo-100 bg-white p-[25px] text-[28px] font-[500] text-logo-100 hover:bg-stone-300">
-            Browse Our Menus
-          </Button>
+        <section className="mt-28 flex flex-col items-center justify-center bg-sec-100 text-center">
+          <WeeklyOption />
         </section>
+
         <section className="my-28 flex items-center justify-center">
           <div className="flex h-[513.58px] w-[973.49px] items-center justify-center bg-pan">
             <div className="flex h-[262px] w-[517px] flex-col items-center justify-center rounded-xl bg-white max-sm:w-[calc(100%-20px)] ">
