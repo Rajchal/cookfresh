@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useCallback, useState } from "react";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
-import { Swiper } from "@/components/swiper/Swiper";
 import { Button } from "@/components/ui/button";
 import WeeklyOption from "@/components/weekly/WeeklyOption";
 
