@@ -95,6 +95,42 @@ const GiftCards = () => {
             </span>
           </div>
         </section>
+        <section className="flex justify-between bg-[#FBF6EB] max-sm:justify-around">
+          <Image
+            src="/images/veggieSpread.png"
+            alt="Vegetable spread"
+            width={400}
+            height={240}
+            className="max-sm:hidden"
+          />
+          <span className="flex w-[400px] flex-col gap-4 p-8 text-center">
+            <h1 className="text-w-option  ">Redeem a gift card</h1>
+            <h2 className="text-little text-[#3E413C]">
+              Received a gift card? Lucky you! Redeem it here and get ready for
+              some delicious home cooking.
+            </h2>
+            <div>
+              <form>
+                <input
+                  type="text"
+                  id="giftCard"
+                  placeholder="Enter code"
+                  className="rounded-md border-2 border-[#3E413CCC] bg-white p-3"
+                />
+                <button className="w-[96] rounded-md bg-logo-100 p-3 text-white">
+                  Redeem
+                </button>
+              </form>
+            </div>
+          </span>
+          <Image
+            src="/images/fruitBasket.png"
+            alt="Vegetable spread"
+            width={238}
+            height={358}
+          />
+        </section>
+        section
       </main>
     </>
   );
