@@ -130,7 +130,14 @@ const GiftCards = () => {
             height={358}
           />
         </section>
-        section
+        <section>
+          <h1>Buy a gift card</h1>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-gradient-to-b from-cyan-500 to-blue-500">
+              lolol
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
