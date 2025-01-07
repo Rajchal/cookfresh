@@ -4,8 +4,18 @@ import Image from "next/image";
 import { useCallback, useState } from "react";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
+import GiftCardButton from "@/components/ui/GiftCardButton";
 
 const GiftCards = () => {
+  const [isSelected, setIsSelected] = useState([true, false, false, false]);
+
+  const handleSelectGift = (number: number) => {
+    const newSelected = isSelected.slice();
+    newSelected.fill(false);
+    newSelected[number] = !newSelected[number];
+    setIsSelected(newSelected);
+  };
+
   const [isBlur, setIsBlur] = useState(false);
   const handleBlur = useCallback(() => {
     setIsBlur(!isBlur);
@@ -133,8 +143,55 @@ const GiftCards = () => {
         <section>
           <h1>Buy a gift card</h1>
           <div className="grid grid-cols-3 gap-4">
-            <div className="bg-gradient-to-b from-cyan-500 to-blue-500">
-              lolol
+            <div className="">lolol</div>
+            <div>
+              <h2 className="server ">How much would you like to gift?</h2>
+              <h3 className="textDays">
+                Recipients can use your gift towards any meal plan and recipes
+                of their choice.
+              </h3>
+              <div className="grid grid-cols-2 gap-0 py-4">
+                <GiftCardButton
+                  number={0}
+                  isSelected={isSelected}
+                  price={50}
+                  handleSelectGift={() => handleSelectGift(0)}
+                />
+                <GiftCardButton
+                  number={1}
+                  isSelected={isSelected}
+                  price={100}
+                  handleSelectGift={() => handleSelectGift(1)}
+                />
+                <GiftCardButton
+                  number={2}
+                  isSelected={isSelected}
+                  price={150}
+                  handleSelectGift={() => handleSelectGift(2)}
+                />
+                <GiftCardButton
+                  number={3}
+                  isSelected={isSelected}
+                  price={200}
+                  handleSelectGift={() => handleSelectGift(3)}
+                />
+              </div>
+            </div>
+            <div>
+              <h2>Who should we send it to?</h2>
+              <form>
+                <input type="text" />
+                <input type="text" />
+                <label htmlFor="Add a personal msg">
+                  {" "}
+                  Add a personal message
+                </label>
+                <textarea
+                  id="personalMessage"
+                  placeholder="Add a personal message"
+                  className="w-full rounded-md border-2 border-[#3E413CCC] bg-white p-3"
+                />
+              </form>
             </div>
           </div>
         </section>
