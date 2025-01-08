@@ -141,8 +141,8 @@ const GiftCards = () => {
           />
         </section>
         <section>
-          <h1>Buy a gift card</h1>
-          <div className="grid grid-cols-3 gap-4">
+          <h1 className="text-info">Buy a gift card</h1>
+          <div className="grid grid-cols-3 gap-4 p-5">
             <GiftCard />
             <div>
               <h2 className="server ">How much would you like to gift?</h2>
@@ -150,7 +150,7 @@ const GiftCards = () => {
                 Recipients can use your gift towards any meal plan and recipes
                 of their choice.
               </h3>
-              <div className="grid grid-cols-2 gap-0 py-4">
+              <div className="grid grid-cols-2 gap-0 p-5">
                 <GiftCardButton
                   number={0}
                   isSelected={isSelected}

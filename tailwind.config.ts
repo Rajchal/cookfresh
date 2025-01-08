@@ -68,7 +68,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-100":
-          "linear-gradient(52.81deg, #B3F69C 18.3%, #70A15F 43.56%, #A2D080 65.21%, #70A15F 81.22%)",
+          "linear-gradient(52.81deg, #70A15F 18.3%,  #73be73 43.56%,  #B3F69C 65.21%, #A2D080 81.22%)",
         auth: 'url("/images/auth-bg.png")',
         authmob: 'url("/images/auth-mob.png")',
         rect: 'url("/images/recttt.png")',

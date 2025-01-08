@@ -103,6 +103,9 @@
   .pref-2 {
     @apply text-[12px] font-[400] leading-[13px] text-[#3E413CCC];
   }
+  .dollary {
+    @apply text-[42px] font-[400] leading-[38.64px];
+  }
 }
 .text-5 {
   @apply text-[20px] font-[500] leading-[30px] text-[#1E1E1EB2];
