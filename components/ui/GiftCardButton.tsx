@@ -13,7 +13,6 @@ const GiftCardButton = ({
   price,
   handleSelectGift,
 }: GiftCardButtonProps) => {
-  console.log(isSelected[number]);
   return (
     <button
       className={`${isSelected[number] ? "bg-[#B3F69C]" : ""} border border-logo-100 w-[170px] rounded-sm p-2 text-[#4D6F41] hover:underline `}

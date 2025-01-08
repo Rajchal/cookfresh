@@ -10,17 +10,12 @@ const config: Config = {
   theme: {
     screens: {
       sm: "640px",
-
       md: "768px",
-
       lg: "1024px",
-
       xl: "1280px",
-
       "2xl": "1536px",
       gg: "428px",
       footClash: "880px",
-
       mainClash: "905px",
     },
     extend: {
@@ -71,22 +66,23 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        "gradient-100":
+          "linear-gradient(52.81deg, #B3F69C 18.3%, #70A15F 43.56%, #A2D080 65.21%, #70A15F 81.22%)",
+        auth: 'url("/images/auth-bg.png")',
+        authmob: 'url("/images/auth-mob.png")',
+        rect: 'url("/images/recttt.png")',
+        pan: 'url("/images/getStarted.png")',
+        board: 'url("/images/board.png")',
+        greenBasket: 'url("/images/greenBasket.png")',
+      },
     },
     fontFamily: {
       league: ["var(--font-league)"],
       lakwa: ["var(--font-lakwa)"],
       fenix: ["var(--font-fenix)"],
     },
-    backgroundImage: {
-      auth: 'url("/images/auth-bg.png")',
-      authmob: 'url("/images/auth-mob.png")',
-      rect: 'url("/images/recttt.png")',
-      pan: 'url("/images/getStarted.png")',
-      board: 'url("/images/board.png")',
-      greenBasket: 'url("/images/greenBasket.png")',
-    },
   },
-
   plugins: [
     function ({
       addUtilities,

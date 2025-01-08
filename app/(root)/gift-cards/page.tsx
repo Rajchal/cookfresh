@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useCallback, useState } from "react";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
+import GiftCard from "@/components/ui/giftCard";
 import GiftCardButton from "@/components/ui/GiftCardButton";
-
 const GiftCards = () => {
   const [isSelected, setIsSelected] = useState([true, false, false, false]);
 
@@ -143,7 +143,7 @@ const GiftCards = () => {
         <section>
           <h1>Buy a gift card</h1>
           <div className="grid grid-cols-3 gap-4">
-            <div className="">lolol</div>
+            <GiftCard />
             <div>
               <h2 className="server ">How much would you like to gift?</h2>
               <h3 className="textDays">
