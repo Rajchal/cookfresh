@@ -179,8 +179,8 @@ const GiftCards = () => {
             </div>
             <div>
               <h2 className="server p-1">Who should we send it to?</h2>
-              <form>
-                <div className="flex justify-between gap-2 p-1">
+              <form className="p-1">
+                <div className="mb-3 flex justify-between gap-2">
                   <input
                     type="text"
                     placeholder="Name"
@@ -192,13 +192,13 @@ const GiftCards = () => {
                     className="w-[180px] rounded-md border-2 border-[#3E413CCC] p-1"
                   />
                 </div>
-                <label htmlFor="Add a personal msg p-1">
+                <label htmlFor="Add a personal msg">
                   Add a personal message
                 </label>
                 <textarea
                   id="personalMessage"
                   placeholder="Add a personal message"
-                  className="w-full rounded-md border-2 border-[#3E413CCC] bg-white p-1"
+                  className="w-full rounded-md border-2 border-[#3E413CCC] bg-white p-3"
                 />
               </form>
             </div>
