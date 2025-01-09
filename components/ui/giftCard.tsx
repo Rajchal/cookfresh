@@ -1,11 +1,22 @@
 import React from "react";
 import Image from "next/image";
+import CountUp from "react-countup";
 
-const GiftCard = () => {
+interface GiftCardProps {
+  price: number;
+}
+
+const GiftCard = ({ price }: GiftCardProps) => {
   return (
     <div className="bg-gradient-100 w-[354] h-[194] rounded-lg">
       <div className="flex flex-col">
-        <h1 className="dollary p-6 text-yellow-200">$50.00</h1>
+        <CountUp
+          end={price}
+          duration={0.75}
+          decimals={2}
+          prefix="$"
+          className="dollary p-6 text-yellow-200"
+        />
         <div className="ml-[calc(50%-80px)] flex gap-0">
           <Image
             src="/icons/ooo.svg"

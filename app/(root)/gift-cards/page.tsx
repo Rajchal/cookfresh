@@ -7,6 +7,7 @@ import Navbar from "@/components/navigation/navbar/Navbar";
 import GiftCard from "@/components/ui/giftCard";
 import GiftCardButton from "@/components/ui/GiftCardButton";
 const GiftCards = () => {
+  const [price, setPrice] = useState(50);
   const [isSelected, setIsSelected] = useState([true, false, false, false]);
 
   const handleSelectGift = (number: number) => {
@@ -143,7 +144,7 @@ const GiftCards = () => {
         <section className="p-10">
           <h1 className="text-info p-5">Buy a gift card</h1>
           <div className="grid grid-cols-3 gap-4 p-5">
-            <GiftCard />
+            <GiftCard price={price} />
             <div>
               <h2 className="server p-1">How much would you like to gift?</h2>
               <h3 className="textDays p-1 text-gray-500">
@@ -156,24 +157,28 @@ const GiftCards = () => {
                   isSelected={isSelected}
                   price={50}
                   handleSelectGift={() => handleSelectGift(0)}
+                  handlePrice={() => setPrice(50)}
                 />
                 <GiftCardButton
                   number={1}
                   isSelected={isSelected}
                   price={100}
                   handleSelectGift={() => handleSelectGift(1)}
+                  handlePrice={() => setPrice(100)}
                 />
                 <GiftCardButton
                   number={2}
                   isSelected={isSelected}
                   price={150}
                   handleSelectGift={() => handleSelectGift(2)}
+                  handlePrice={() => setPrice(150)}
                 />
                 <GiftCardButton
                   number={3}
                   isSelected={isSelected}
                   price={200}
                   handleSelectGift={() => handleSelectGift(3)}
+                  handlePrice={() => setPrice(200)}
                 />
               </div>
             </div>

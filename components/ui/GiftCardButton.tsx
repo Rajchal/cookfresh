@@ -5,6 +5,7 @@ interface GiftCardButtonProps {
   isSelected: boolean[];
   price: number;
   handleSelectGift: (number: number) => void;
+  handlePrice: (price: number) => void;
 }
 
 const GiftCardButton = ({
@@ -12,13 +13,17 @@ const GiftCardButton = ({
   isSelected,
   price,
   handleSelectGift,
+  handlePrice,
 }: GiftCardButtonProps) => {
   return (
     <button
       className={`${isSelected[number] ? "bg-[#B3F69C]" : ""} border border-logo-100 w-[170px] rounded-sm p-2 text-[#4D6F41] hover:underline `}
-      onClick={() => handleSelectGift(number)}
+      onClick={() => {
+        handleSelectGift(number);
+        handlePrice(price);
+      }}
     >
-      {number}${price.toFixed(2)}
+      ${price.toFixed(2)}
     </button>
   );
 };
