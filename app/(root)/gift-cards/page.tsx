@@ -140,17 +140,17 @@ const GiftCards = () => {
             height={358}
           />
         </section>
-        <section>
-          <h1 className="text-info">Buy a gift card</h1>
+        <section className="p-10">
+          <h1 className="text-info p-5">Buy a gift card</h1>
           <div className="grid grid-cols-3 gap-4 p-5">
             <GiftCard />
             <div>
-              <h2 className="server ">How much would you like to gift?</h2>
-              <h3 className="textDays">
+              <h2 className="server p-1">How much would you like to gift?</h2>
+              <h3 className="textDays p-1 text-gray-500">
                 Recipients can use your gift towards any meal plan and recipes
                 of their choice.
               </h3>
-              <div className="grid grid-cols-2 gap-0 p-5">
+              <div className="grid grid-cols-2 gap-3 p-5">
                 <GiftCardButton
                   number={0}
                   isSelected={isSelected}
@@ -177,10 +177,10 @@ const GiftCards = () => {
                 />
               </div>
             </div>
-            <div className="p-5">
-              <h2>Who should we send it to?</h2>
+            <div>
+              <h2 className="server p-1">Who should we send it to?</h2>
               <form>
-                <div className="flex justify-between gap-2">
+                <div className="flex justify-between gap-2 p-1">
                   <input
                     type="text"
                     placeholder="Name"
@@ -192,13 +192,13 @@ const GiftCards = () => {
                     className="w-[180px] rounded-md border-2 border-[#3E413CCC] p-1"
                   />
                 </div>
-                <label htmlFor="Add a personal msg">
+                <label htmlFor="Add a personal msg p-1">
                   Add a personal message
                 </label>
                 <textarea
                   id="personalMessage"
                   placeholder="Add a personal message"
-                  className="w-full rounded-md border-2 border-[#3E413CCC] bg-white p-3"
+                  className="w-full rounded-md border-2 border-[#3E413CCC] bg-white p-1"
                 />
               </form>
             </div>
