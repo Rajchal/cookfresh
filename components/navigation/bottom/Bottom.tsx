@@ -2,9 +2,14 @@ import Image from "next/image";
 import React from "react";
 
 import { Button } from "@/components/ui/button";
-const Bottom = () => {
+
+interface bottomProps {
+  isBlur: boolean;
+}
+
+const Bottom = ({ isBlur }: bottomProps) => {
   return (
-    <>
+    <footer className={`${isBlur ? "blur" : ""} `}>
       <section className="flex justify-between border-y-[3px] border-kairo-100 bg-fol-100 max-footClash:flex-col">
         <div className="flex basis-1/2 flex-col items-center justify-center text-center">
           <p className="text-follow mb-16 mt-10 max-sm:text-[26px]">
@@ -108,7 +113,7 @@ const Bottom = () => {
           </div>
         </div>
       </section>
-    </>
+    </footer>
   );
 };
 

@@ -1,14 +1,7 @@
 import { ReactNode } from "react";
 
-import Bottom from "@/components/navigation/bottom/Bottom";
-
 const RootLayout = ({ children }: { children: ReactNode }) => {
-  return (
-    <main>
-      {children}
-      <Bottom />
-    </main>
-  );
+  return <main>{children}</main>;
 };
 
 export default RootLayout;

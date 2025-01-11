@@ -1,3 +1,4 @@
+import Bottom from "@/components/navigation/bottom/Bottom";
 import React from "react";
 
 const Menu = () => {
@@ -16,6 +17,7 @@ const Menu = () => {
           Search
         </button>
       </form>
+      <Bottom />
     </>
   );
 };

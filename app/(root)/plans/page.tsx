@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import CountUp from "react-countup";
 
+import Bottom from "@/components/navigation/bottom/Bottom";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import PrefOption from "@/components/preference/PrefOption";
 import Selectdays from "@/components/selectdays/selectdays";
@@ -319,6 +320,7 @@ const Plans = () => {
           </button>
         </div>
       )}
+      <Bottom isBlur={isBlurr} />
     </>
   );
 };
