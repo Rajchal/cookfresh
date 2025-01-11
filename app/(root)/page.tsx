@@ -13,6 +13,7 @@ export default function Home() {
   const handleBlur = useCallback(() => {
     setIsBlur(!isBlur);
   }, [isBlur]);
+
   return (
     <>
       <Navbar handleBlur={handleBlur} />
