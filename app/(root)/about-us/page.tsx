@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import Bottom from "@/components/navigation/bottom/Bottom";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
@@ -125,6 +126,7 @@ const AboutUs = () => {
           </div>
         </section>
       </main>
+      <Bottom isBlur={isBlur} />
     </>
   );
 };

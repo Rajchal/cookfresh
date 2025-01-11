@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 
+import Bottom from "@/components/navigation/bottom/Bottom";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import { Button } from "@/components/ui/button";
 import WeeklyOption from "@/components/weekly/WeeklyOption";
@@ -72,6 +73,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Bottom isBlur={isBlur} />
     </>
   );
 }

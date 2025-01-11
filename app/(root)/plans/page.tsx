@@ -320,7 +320,7 @@ const Plans = () => {
           </button>
         </div>
       )}
-      <Bottom isBlur={isBlurr} />
+      <Bottom isBlur={isBlurr || isBlur} />
     </>
   );
 };

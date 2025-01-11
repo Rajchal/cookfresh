@@ -1,6 +1,3 @@
-import Bottom from "@/components/navigation/bottom/Bottom";
-import React from "react";
-
 const Menu = () => {
   return (
     <>
@@ -17,7 +14,6 @@ const Menu = () => {
           Search
         </button>
       </form>
-      <Bottom />
     </>
   );
 };

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 
+import Bottom from "@/components/navigation/bottom/Bottom";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import GiftCard from "@/components/ui/giftCard";
 import GiftCardButton from "@/components/ui/GiftCardButton";
@@ -210,6 +211,7 @@ const GiftCards = () => {
           </div>
         </section>
       </main>
+      <Bottom isBlur={isBlur} />
     </>
   );
 };
