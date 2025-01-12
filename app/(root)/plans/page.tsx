@@ -125,7 +125,9 @@ const Plans = () => {
       <main
         className={`${isBlur || isBlurr ? "pointer-events-none overflow-hidden blur" : ""}`}
       >
-        <section className={`border border-t-[95px]`}>
+        <section
+          className={`max-[1100px]:border-t-[87px] border border-t-[95px]`}
+        >
           <h1 className="text-week pt-16 text-center text-logo-100">
             Personalize your meal subscription
           </h1>

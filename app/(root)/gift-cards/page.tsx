@@ -26,7 +26,7 @@ const GiftCards = () => {
     <>
       <Navbar handleBlur={handleBlur} />
       <main className={`${isBlur ? "blur" : ""}`}>
-        <section className="flex-between flex border border-t-[95px] bg-logo-100 ">
+        <section className="flex-between max-[1100px]:border-t-[87px] flex border border-t-[95px] bg-logo-100 ">
           <Image
             src="/images/spoonleft.png"
             alt="spoonLeft"
