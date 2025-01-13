@@ -86,6 +86,7 @@ const Plans = () => {
   const handleSelected = (data: number) => {
     const newSelected = [...isSelect];
     newSelected[data] = !newSelected[data];
+
     setIsSelect(newSelected);
   };
   const setServeHandler = (value: string) => {
@@ -120,6 +121,16 @@ const Plans = () => {
       );
     }
   };
+  const selectionDays=()=>{
+    let count=0;
+    isSelect.forEach((a)=>{
+      if(a){
+        count++;
+      }
+
+    })
+    count>Number(selectMeal)?
+  }
   return (
     <>
       <Navbar handleBlur={handleBlur} blurr={isBlurr} />
