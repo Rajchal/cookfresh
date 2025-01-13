@@ -40,6 +40,7 @@ const Plans = () => {
   const [isPrefSelected, setIsPrefSelected] = useState(
     Array<boolean>(5).fill(false)
   );
+  const coupouns = ["pranavKale", "krishalNoobde", "abheetAustin"];
   const options = [
     {
       number: 1,
@@ -126,7 +127,7 @@ const Plans = () => {
         className={`${isBlur || isBlurr ? "pointer-events-none overflow-hidden blur" : ""}`}
       >
         <section
-          className={`max-[1100px]:border-t-[87px] border border-t-[95px]`}
+          className={`border border-t-[95px] max-[1100px]:border-t-[87px]`}
         >
           <h1 className="text-week pt-16 text-center text-logo-100">
             Personalize your meal subscription
@@ -280,6 +281,31 @@ const Plans = () => {
                   />
                 </span>
               </div>
+              <form>
+                <label htmlFor="Coupun" className="textDays2 text-logo-100">
+                  Delivery Coupun:{" "}
+                </label>
+                <input type="text" className="border-2" />
+                <button
+                  type="button"
+                  className="textDays ml-3 rounded-lg bg-logo-100 p-2 text-white hover:bg-green-800"
+                  onClick={() => {
+                    const input = document.querySelector(
+                      'input[type="text"]'
+                    ) as HTMLInputElement;
+                    if (input) {
+                      const inputValue = input.value;
+                      coupouns.forEach((coupon) => {
+                        if (coupon === inputValue) {
+                          setShippingPrice(0);
+                        }
+                      });
+                    }
+                  }}
+                >
+                  Go
+                </button>
+              </form>
               <h2 className="textDays w-[300px] text-wrap p-6 text-center text-[#3E413CB2]">
                 Now you can browse our menu to order for this week
               </h2>
