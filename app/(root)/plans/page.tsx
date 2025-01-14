@@ -121,16 +121,17 @@ const Plans = () => {
       );
     }
   };
-  const selectionDays=()=>{
-    let count=0;
-    isSelect.forEach((a)=>{
-      if(a){
+  const selectionDays = (dayy: number) => {
+    let count = 0;
+    isSelect.forEach((a) => {
+      if (a) {
         count++;
       }
-
-    })
-    count>Number(selectMeal)?
-  }
+    });
+    count > Number(selectMeal)
+      ? alert(`You have only selected ${selectMeal} days`)
+      : handleSelected(dayy);
+  };
   return (
     <>
       <Navbar handleBlur={handleBlur} blurr={isBlurr} />
