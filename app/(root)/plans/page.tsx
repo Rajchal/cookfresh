@@ -128,9 +128,6 @@ const Plans = () => {
         count++;
       }
     });
-    count > Number(selectMeal)
-      ? alert(`You have only selected ${selectMeal} days`)
-      : handleSelected(dayy);
   };
   return (
     <>
@@ -346,7 +343,7 @@ const Plans = () => {
                   day={days.indexOf(day)}
                   dayName={day}
                   isSelected={isSelect}
-                  handleSelected={() => handleSelected(days.indexOf(day))}
+                  handleSelected={() => selectionDays(days.indexOf(day))}
                 />
               );
             })}
