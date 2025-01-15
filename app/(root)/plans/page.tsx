@@ -128,6 +128,7 @@ const Plans = () => {
         count++;
       }
     });
+    console.log(count);
   };
   return (
     <>
