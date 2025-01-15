@@ -129,6 +129,7 @@ const Plans = () => {
       }
     });
     console.log(count);
+    handleSelected(dayy);
   };
   return (
     <>
