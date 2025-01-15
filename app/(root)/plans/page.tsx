@@ -122,14 +122,18 @@ const Plans = () => {
     }
   };
   const selectionDays = (dayy: number) => {
-    let count = 0;
-    isSelect.forEach((a) => {
-      if (a) {
+    let count: number = 0;
+    let i = 0;
+    let sameClick: boolean = false;
+    for (i = 0; i < 7; i++) {
+      if (i === dayy && isSelect[i]) {
+        sameClick = true;
+        break;
+      } else if (isSelect[i]) {
         count++;
       }
-    });
-    console.log(count);
-    handleSelected(dayy);
+    }
+    if (Number(selectMeal) > count || sameClick) handleSelected(dayy);
   };
   return (
     <>
