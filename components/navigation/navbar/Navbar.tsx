@@ -75,7 +75,12 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             setIsMobileNavVisible((prev) => !prev);
           }}
         >
-          =
+          <Image
+            src="/images/hamburger.png"
+            alt="Navigate"
+            height={40}
+            width={40}
+          />
         </button>
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
