@@ -68,6 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             <p>Cook</p> <p>Fresh</p>
           </div>
         </Link>
+        <button className="ml-[300px] sm:hidden">=</button>
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
             href="/about-us"
