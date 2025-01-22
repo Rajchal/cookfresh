@@ -15,7 +15,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
-
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
     setIsPopupVisibleResiter(false);
@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   };
 
   const clas =
-    isPopupVisibleLogin || isPopupVisibleResiter || blurr
+    isPopupVisibleLogin || isPopupVisibleResiter || blurr || isMobileNavVisible
       ? "blur-sm pointer-events-none"
       : "blur-0";
 
@@ -68,7 +68,15 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             <p>Cook</p> <p>Fresh</p>
           </div>
         </Link>
-        <button className="ml-[300px] sm:hidden">=</button>
+        <button
+          className="ml-[300px] sm:hidden"
+          onClick={() => {
+            handleBlur();
+            setIsMobileNavVisible((prev) => !prev);
+          }}
+        >
+          =
+        </button>
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
             href="/about-us"
