@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   };
 
   const clas =
-    isPopupVisibleLogin || isPopupVisibleResiter || blurr || isMobileNavVisible
+    isPopupVisibleLogin || isPopupVisibleResiter || blurr
       ? "blur-sm pointer-events-none"
       : "blur-0";
 
@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   return (
     <>
       <nav
-        className={`${clas} flex-between fixed z-10 w-full  gap-5 bg-white p-3 shadow-md sm:px-12`}
+        className={`${clas} flex-between fixed z-50 w-full  gap-5 bg-white p-3 shadow-md sm:px-12`}
       >
         <Link href="/" className="flex gap-0">
           <Image
@@ -78,8 +78,8 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <Image
             src="/images/hamburger.png"
             alt="Navigate"
-            height={40}
-            width={40}
+            height={30}
+            width={30}
           />
         </button>
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
@@ -134,6 +134,30 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
       {isPopupVisibleResiter && (
         <div className="fixed left-[calc(50%-260px)] top-8 z-50 flex items-center justify-center  max-sm:left-[calc(50%-140px)]">
           <Register gotLogin={gotoLogin} closePopup={closePopup} />
+        </div>
+      )}
+      {isMobileNavVisible && (
+        <div className="fixed  z-40 mt-[87px] flex items-center justify-center bg-white  ">
+          <span className="flex flex-col gap-4 p-4">
+            <Link
+              href="/about-us"
+              className="text-nowrap text-logo-100 hover:underline"
+            >
+              About Us
+            </Link>
+            <Link href="/menu" className="text-logo-100 hover:underline">
+              Menu
+            </Link>
+            <Link href="/plans" className="text-logo-100 hover:underline">
+              Plans
+            </Link>
+            <Link
+              href="/gift-cards"
+              className="text-nowrap text-logo-100 hover:underline"
+            >
+              Gift Cards
+            </Link>
+          </span>
         </div>
       )}
     </>

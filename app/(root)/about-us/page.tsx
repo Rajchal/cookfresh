@@ -35,7 +35,7 @@ const AboutUs = () => {
     <>
       <Navbar handleBlur={handleBlur} />
       <main className={`${isBlur ? "blur" : ""}`}>
-        <section className="max-[1100px]:border-t-[87px] border border-t-[95px] bg-board bg-cover bg-center bg-no-repeat text-center">
+        <section className="border border-t-[95px] bg-board bg-cover bg-center bg-no-repeat text-center max-[1100px]:border-t-[87px]">
           <div className="text-makee flex-center h-[calc(100vh-69px)] w-screen flex-col text-white">
             <p>Make Your</p>
             <p>Cooking Journey Fun</p>
