@@ -137,27 +137,25 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
         </div>
       )}
       {isMobileNavVisible && (
-        <div className="fixed  z-40 mt-[87px] flex items-center justify-center bg-white  ">
-          <span className="flex flex-col gap-4 p-4">
-            <Link
-              href="/about-us"
-              className="text-nowrap text-logo-100 hover:underline"
-            >
-              About Us
-            </Link>
-            <Link href="/menu" className="text-logo-100 hover:underline">
-              Menu
-            </Link>
-            <Link href="/plans" className="text-logo-100 hover:underline">
-              Plans
-            </Link>
-            <Link
-              href="/gift-cards"
-              className="text-nowrap text-logo-100 hover:underline"
-            >
-              Gift Cards
-            </Link>
-          </span>
+        <div className="fixed z-40 mt-[87px] flex h-screen w-[150px] flex-col  items-center  gap-6 bg-white ">
+          <Link
+            href="/about-us"
+            className="mt-10 text-nowrap text-logo-100 hover:underline"
+          >
+            About Us
+          </Link>
+          <Link href="/menu" className="text-logo-100 hover:underline">
+            Menu
+          </Link>
+          <Link href="/plans" className="text-logo-100 hover:underline">
+            Plans
+          </Link>
+          <Link
+            href="/gift-cards"
+            className="text-nowrap text-logo-100 hover:underline"
+          >
+            Gift Cards
+          </Link>
         </div>
       )}
     </>
