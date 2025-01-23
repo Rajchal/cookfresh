@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   return (
     <>
       <nav
-        className={`${clas} flex-between fixed z-10 w-full gap-5 bg-white p-3 shadow-md sm:px-12`}
+        className={`${clas} flex-between fixed z-10 w-full  gap-5 bg-white p-3 shadow-md sm:px-12`}
       >
         <Link href="/" className="flex gap-0">
           <Image
@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           </div>
         </Link>
         <button
-          className="ml-[300px] sm:hidden"
+          className="mr-5 sm:hidden"
           onClick={() => {
             handleBlur();
             setIsMobileNavVisible((prev) => !prev);
@@ -103,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           </Link>
         </span>
 
-        <div className="flex-[25%]"></div>
+        <div className="flex-[25%] max-sm:hidden"></div>
 
         <button
           onClick={() => {

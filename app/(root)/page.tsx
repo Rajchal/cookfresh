@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Navbar handleBlur={handleBlur} />
       <main className={`${isBlur ? "blur" : ""}`}>
-        <section className="max-[1100px]:border-t-[87px] border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px]">
+        <section className="border border-t-[95px] bg-rect bg-cover bg-center bg-no-repeat pb-[255px] max-[1100px]:border-t-[87px]">
           <div className="text-data flex flex-col pl-[109.22px] pt-[71.8] text-logo-100 max-sm:pl-[20px]">
             <p>Easy meal kits.</p>
             <p>Fresh ingredients</p>
