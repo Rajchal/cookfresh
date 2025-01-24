@@ -162,7 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
               togglePopupLogin();
               handleBlur();
             }}
-            className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
+            className="text-option max-[1100px]:text-mob-option mt-20 px-4 py-2 text-logo-100 hover:underline "
           >
             Login
           </button>
@@ -172,7 +172,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
               togglePopupRegister();
               handleBlur();
             }}
-            className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 max-sm:hidden"
+            className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 "
           >
             Sign Up
           </button>
