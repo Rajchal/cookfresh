@@ -156,6 +156,26 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           >
             Gift Cards
           </Link>
+
+          <button
+            onClick={() => {
+              togglePopupLogin();
+              handleBlur();
+            }}
+            className="text-option max-[1100px]:text-mob-option px-4 py-2 text-logo-100 hover:underline max-sm:hidden"
+          >
+            Login
+          </button>
+
+          <button
+            onClick={() => {
+              togglePopupRegister();
+              handleBlur();
+            }}
+            className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 max-sm:hidden"
+          >
+            Sign Up
+          </button>
         </div>
       )}
     </>
