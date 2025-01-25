@@ -2,12 +2,16 @@
 
 Welcome to **CookFresh**, your go-to recipe finding website! Discover new recipes, save your favorites, and share your culinary creations with the world.
 
+This is an improved version of the previous website [cookfresh.online](http://cookfresh.online) which was made with HTML, CSS, JavaScript, and Bootstrap. In this project, we have upgraded to using **Next.js** for a more robust and scalable application.
+
 ## Features
 
 - **Search Recipes**: Find recipes by ingredients, cuisine, or dietary preferences.
 - **Save Favorites**: Bookmark your favorite recipes for easy access.
 - **Share Recipes**: Share your own recipes with the community.
 - **User Reviews**: Read and write reviews for recipes.
+- **Responsive Design**: Enjoy a seamless experience on any device.
+- **Advanced Filtering**: Use advanced filters to narrow down your search results.
 
 ## Getting Started
 
@@ -18,9 +22,10 @@ Welcome to **CookFresh**, your go-to recipe finding website! Discover new recipe
 
 ## Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript, React , Next Js
+- **Frontend**: HTML, CSS, JavaScript, React, Next.js
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
+- **Styling**: Tailwind CSS for modern and responsive design
 
 ## Contributing
 
