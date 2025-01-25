@@ -157,6 +157,8 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             Gift Cards
           </Link>
 
+          <p className="text-center">___________________</p>
+
           <button
             onClick={() => {
               togglePopupLogin();
