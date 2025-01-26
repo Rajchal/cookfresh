@@ -157,7 +157,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             Gift Cards
           </Link>
 
-          <p className="text-center">___________________</p>
+          <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[202px] w-[3px] bg-kairo-100 max-footClash:hidden" />
 
           <button
             onClick={() => {
