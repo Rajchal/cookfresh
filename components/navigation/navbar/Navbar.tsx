@@ -157,7 +157,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
             Gift Cards
           </Link>
 
-          <div className="absolute left-1/2 my-[33px] -ml-0.5 h-[202px] w-[3px] bg-kairo-100 max-footClash:hidden" />
+          <div className="absolute top-[calc(50%-50px)]  -ml-0.5 h-[3px] w-[100px] bg-kairo-100 sm:hidden" />
 
           <button
             onClick={() => {
