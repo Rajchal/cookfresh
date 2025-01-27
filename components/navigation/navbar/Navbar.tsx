@@ -137,7 +137,9 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
         </div>
       )}
       {isMobileNavVisible && (
-        <div className="fixed z-40 mt-[87px] flex h-screen w-[150px] flex-col  items-center  gap-6 bg-white ">
+        <div
+          className={`${clas} fixed z-40 mt-[87px] flex h-screen w-[150px] flex-col  items-center  gap-6 bg-white `}
+        >
           <Link
             href="/about-us"
             className="mt-10 text-nowrap text-logo-100 hover:underline"
@@ -162,7 +164,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <button
             onClick={() => {
               togglePopupLogin();
-              handleBlur();
             }}
             className="text-option max-[1100px]:text-mob-option mt-20 px-4 py-2 text-logo-100 hover:underline "
           >
@@ -172,7 +173,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <button
             onClick={() => {
               togglePopupRegister();
-              handleBlur();
             }}
             className="text-option max-[1100px]:text-mob-option text-nowrap rounded-full bg-logo-100 px-4 py-2 text-white hover:bg-green-900 "
           >
