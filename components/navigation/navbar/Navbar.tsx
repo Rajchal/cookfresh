@@ -16,6 +16,10 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
+  const [menuSelected, setMenuSelected] = useState(
+    Array<boolean>(4).fill(false)
+  );
+
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
     setIsPopupVisibleResiter(false);
@@ -85,19 +89,23 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
             href="/about-us"
-            className="text-nowrap text-logo-100 hover:underline"
+            className={`${clas1} text-nowrap text-logo-100 hover:underline`}
           >
             About Us
           </Link>
-          <Link href="/menu" className="text-logo-100 hover:underline">
+          <Link href="/menu">
+            className={`${clas2} text-nowrap text-logo-100 hover:underline`}
             Menu
           </Link>
-          <Link href="/plans" className="text-logo-100 hover:underline">
+          <Link
+            href="/plans"
+            className={`${clas3} text-logo-100 hover:underline`}
+          >
             Plans
           </Link>
           <Link
             href="/gift-cards"
-            className="text-nowrap text-logo-100 hover:underline"
+            className={`${clas4} text-nowrap text-logo-100 hover:underline`}
           >
             Gift Cards
           </Link>
