@@ -19,6 +19,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [menuSelected, setMenuSelected] = useState(
     Array<boolean>(4).fill(false)
   );
+  const clas1 = menuSelected[0] ? "underline" : "";
+
+  const clas2 = menuSelected[1] ? "underline" : "";
+
+  const clas3 = menuSelected[2] ? "underline" : "";
+
+  const clas4 = menuSelected[3] ? "underline" : "";
 
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
@@ -93,8 +100,10 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           >
             About Us
           </Link>
-          <Link href="/menu">
+          <Link
+            href="/menu"
             className={`${clas2} text-nowrap text-logo-100 hover:underline`}
+          >
             Menu
           </Link>
           <Link
