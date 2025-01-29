@@ -19,13 +19,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [menuSelected, setMenuSelected] = useState(
     Array<boolean>(4).fill(false)
   );
-  const clas1 = menuSelected[0] ? "underline" : "";
+  const clas1 = menuSelected[0] ? "underline pointer-event-none" : "";
 
-  const clas2 = menuSelected[1] ? "underline" : "";
+  const clas2 = menuSelected[1] ? "underline pointer-event-none" : "";
 
-  const clas3 = menuSelected[2] ? "underline" : "";
+  const clas3 = menuSelected[2] ? "underline pointer-event-none" : "";
 
-  const clas4 = menuSelected[3] ? "underline" : "";
+  const clas4 = menuSelected[3] ? "underline pointer-event-none" : "";
 
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
@@ -97,24 +97,44 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <Link
             href="/about-us"
             className={`${clas1} text-nowrap text-logo-100 hover:underline`}
+            onClick={() => {
+              const temp = new Array<boolean>(4).fill(false);
+              temp[0] = true;
+              setMenuSelected(temp);
+            }}
           >
             About Us
           </Link>
           <Link
             href="/menu"
             className={`${clas2} text-nowrap text-logo-100 hover:underline`}
+            onClick={() => {
+              const temp = new Array<boolean>(4).fill(false);
+              temp[1] = true;
+              setMenuSelected(temp);
+            }}
           >
             Menu
           </Link>
           <Link
             href="/plans"
             className={`${clas3} text-logo-100 hover:underline`}
+            onClick={() => {
+              const temp = new Array<boolean>(4).fill(false);
+              temp[2] = true;
+              setMenuSelected(temp);
+            }}
           >
             Plans
           </Link>
           <Link
             href="/gift-cards"
             className={`${clas4} text-nowrap text-logo-100 hover:underline`}
+            onClick={() => {
+              const temp = new Array<boolean>(4).fill(false);
+              temp[3] = true;
+              setMenuSelected(temp);
+            }}
           >
             Gift Cards
           </Link>
