@@ -95,13 +95,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
         </button>
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
-            href="/about-us"
             className={`${clas1} text-nowrap text-logo-100 hover:underline`}
             onClick={() => {
               const temp = new Array<boolean>(4).fill(false);
               temp[0] = true;
               setMenuSelected(temp);
             }}
+            href="/about-us"
           >
             About Us
           </Link>
