@@ -15,6 +15,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const router = useRouter();
+  console.log(router?.pathname);
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
@@ -50,6 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
       : "blur-0";
 
   useEffect(() => {
+    if (!router?.pathname) return;
     if (!isPopupVisibleLogin && !isPopupVisibleResiter && !blurr) {
       document.body.style.overflow = "auto";
     } else {
@@ -57,14 +59,16 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     }
 
     const path = router?.pathname;
-    if (path === "/about") {
+    console.log(router.pathname);
+    if (path === "/about-us") {
+      console.log("apple");
       setMenuSelected([true, false, false, false]);
     } else if (path === "/services") {
       setMenuSelected([false, true, false, false]);
-    } else if (path === "/contact") {
+    } else if (path === "/plans") {
       setMenuSelected([false, false, true, false]);
     }
-  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr, router.pathname]);
+  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr, router?.pathname]);
 
   const clas1 = menuSelected[0] ? "underline pointer-event-none" : "";
 
