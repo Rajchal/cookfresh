@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/compat/router";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -13,19 +14,13 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
+  const router = useRouter();
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
   const [menuSelected, setMenuSelected] = useState(
     Array<boolean>(4).fill(false)
   );
-  const clas1 = menuSelected[0] ? "underline pointer-event-none" : "";
-
-  const clas2 = menuSelected[1] ? "underline pointer-event-none" : "";
-
-  const clas3 = menuSelected[2] ? "underline pointer-event-none" : "";
-
-  const clas4 = menuSelected[3] ? "underline pointer-event-none" : "";
 
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
@@ -60,7 +55,24 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     } else {
       document.body.style.overflow = "hidden";
     }
-  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr]);
+
+    const path = router?.pathname;
+    if (path === "/about") {
+      setMenuSelected([true, false, false, false]);
+    } else if (path === "/services") {
+      setMenuSelected([false, true, false, false]);
+    } else if (path === "/contact") {
+      setMenuSelected([false, false, true, false]);
+    }
+  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr, router.pathname]);
+
+  const clas1 = menuSelected[0] ? "underline pointer-event-none" : "";
+
+  const clas2 = menuSelected[1] ? "underline pointer-event-none" : "";
+
+  const clas3 = menuSelected[2] ? "underline pointer-event-none" : "";
+
+  const clas4 = menuSelected[3] ? "underline pointer-event-none" : "";
 
   return (
     <>
@@ -96,11 +108,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
         <span className="text-option max-[1100px]:text-mob-option flex gap-5 pl-10 max-sm:hidden">
           <Link
             className={`${clas1} text-nowrap text-logo-100 hover:underline`}
-            onClick={() => {
-              const temp = new Array<boolean>(4).fill(false);
-              temp[0] = true;
-              setMenuSelected(temp);
-            }}
             href="/about-us"
           >
             About Us
@@ -108,33 +115,18 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <Link
             href="/menu"
             className={`${clas2} text-nowrap text-logo-100 hover:underline`}
-            onClick={() => {
-              const temp = new Array<boolean>(4).fill(false);
-              temp[1] = true;
-              setMenuSelected(temp);
-            }}
           >
             Menu
           </Link>
           <Link
             href="/plans"
             className={`${clas3} text-logo-100 hover:underline`}
-            onClick={() => {
-              const temp = new Array<boolean>(4).fill(false);
-              temp[2] = true;
-              setMenuSelected(temp);
-            }}
           >
             Plans
           </Link>
           <Link
             href="/gift-cards"
             className={`${clas4} text-nowrap text-logo-100 hover:underline`}
-            onClick={() => {
-              const temp = new Array<boolean>(4).fill(false);
-              temp[3] = true;
-              setMenuSelected(temp);
-            }}
           >
             Gift Cards
           </Link>
