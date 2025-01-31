@@ -21,11 +21,10 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
   const [menuSelected, setMenuSelected] = useState(0);
 
-  const clas1 = menuSelected === 1 ? "underline " : "";
-
-  const clas2 = menuSelected === 2 ? "underline " : "";
-  const clas3 = menuSelected === 3 ? "underline " : "";
-  const clas4 = menuSelected === 4 ? "underline " : "";
+  const clas1 = menuSelected === 1 ? "underline pointer-events-none" : "";
+  const clas2 = menuSelected === 2 ? "underline pointer-events-none" : "";
+  const clas3 = menuSelected === 3 ? "underline pointer-events-none" : "";
+  const clas4 = menuSelected === 4 ? "underline pointer-events-none" : "";
 
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
