@@ -59,6 +59,9 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     } else {
       document.body.style.overflow = "hidden";
     }
+    if (window.innerWidth < 640) {
+      setIsMobileNavVisible(false);
+    }
     if (pathname === "/about-us") {
       setMenuSelected(1);
     } else if (pathname === "/menu") {
@@ -167,25 +170,31 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <Register gotLogin={gotoLogin} closePopup={closePopup} />
         </div>
       )}
-      {isMobileNavVisible && (
+      {isMobileNavVisible && window.innerWidth < 640 && (
         <div
           className={`${clas} fixed z-40 mt-[87px] flex h-screen w-[150px] flex-col  items-center  gap-6 bg-white `}
         >
           <Link
             href="/about-us"
-            className="mt-10 text-nowrap text-logo-100 hover:underline"
+            className={`${clas1} mt-10 text-nowrap text-logo-100 hover:underline`}
           >
             About Us
           </Link>
-          <Link href="/menu" className="text-logo-100 hover:underline">
+          <Link
+            href="/menu"
+            className={`${clas2} text-nowrap text-logo-100 hover:underline`}
+          >
             Menu
           </Link>
-          <Link href="/plans" className="text-logo-100 hover:underline">
+          <Link
+            href="/plans"
+            className={`${clas3} text-nowrap text-logo-100 hover:underline`}
+          >
             Plans
           </Link>
           <Link
             href="/gift-cards"
-            className="text-nowrap text-logo-100 hover:underline"
+            className={`${clas4}text-nowrap text-logo-100 hover:underline`}
           >
             Gift Cards
           </Link>
