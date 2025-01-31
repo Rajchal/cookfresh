@@ -16,9 +16,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
-  const [menuSelected, setMenuSelected] = useState(
-    Array<boolean>(4).fill(false)
-  );
+  const [menuSelected, setMenuSelected] = useState(0);
+
+  const clas1 = menuSelected === 1 ? "underline " : "";
+
+  const clas2 = menuSelected === 2 ? "underline " : "";
+  const clas3 = menuSelected === 3 ? "underline " : "";
+  const clas4 = menuSelected === 4 ? "underline " : "";
 
   const closePopup = () => {
     setIsPopupVisibleLogin(false);
@@ -55,14 +59,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     }
   }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr]);
 
-  const clas1 = menuSelected[0] ? "underline pointer-event-none" : "";
-
-  const clas2 = menuSelected[1] ? "underline pointer-event-none" : "";
-
-  const clas3 = menuSelected[2] ? "underline pointer-event-none" : "";
-
-  const clas4 = menuSelected[3] ? "underline pointer-event-none" : "";
-
   return (
     <>
       <nav
@@ -98,24 +94,28 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
           <Link
             className={`${clas1} text-nowrap text-logo-100 hover:underline`}
             href="/about-us"
+            onClick={() => setMenuSelected(1)}
           >
             About Us
           </Link>
           <Link
             href="/menu"
             className={`${clas2} text-nowrap text-logo-100 hover:underline`}
+            onClick={() => setMenuSelected(2)}
           >
             Menu
           </Link>
           <Link
             href="/plans"
             className={`${clas3} text-logo-100 hover:underline`}
+            onClick={() => setMenuSelected(3)}
           >
             Plans
           </Link>
           <Link
             href="/gift-cards"
             className={`${clas4} text-nowrap text-logo-100 hover:underline`}
+            onClick={() => setMenuSelected(4)}
           >
             Gift Cards
           </Link>
