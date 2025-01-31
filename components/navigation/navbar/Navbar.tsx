@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 import Login from "@/components/auth/Login";
@@ -13,6 +14,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
+  const pathname = usePathname();
+  console.log(pathname);
   const [isPopupVisibleLogin, setIsPopupVisibleLogin] = useState(false);
   const [isPopupVisibleResiter, setIsPopupVisibleResiter] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
@@ -57,7 +60,18 @@ const Navbar: React.FC<NavbarProps> = ({ handleBlur, blurr = false }) => {
     } else {
       document.body.style.overflow = "hidden";
     }
-  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr]);
+    if (pathname === "/about-us") {
+      setMenuSelected(1);
+    } else if (pathname === "/menu") {
+      setMenuSelected(2);
+    } else if (pathname === "/plans") {
+      setMenuSelected(3);
+    } else if (pathname === "/gift-cards") {
+      setMenuSelected(4);
+    } else {
+      setMenuSelected(0);
+    }
+  }, [isPopupVisibleLogin, isPopupVisibleResiter, blurr, pathname]);
 
   return (
     <>
