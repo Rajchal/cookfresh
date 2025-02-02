@@ -37,6 +37,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please contact us at support@cookfresh.com.
+For any questions or feedback, please contact us at rajchalanjal1@gmail.com
 
 Happy Cooking!
