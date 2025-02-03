@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useCallback } from "react";
 
 import Navbar from "@/components/navigation/navbar/Navbar";
@@ -9,7 +11,7 @@ const Menu = () => {
   }, [isBlur]);
   return (
     <>
-      <Navbar handleBlur={handleBlur} blurr={isBlurr} />
+      <Navbar handleBlur={handleBlur} blurr={isBlur} />
       <p className="text-easyy border border-t-[95px] p-16 text-center text-logo-100 max-[1100px]:border-t-[87px] ">
         Explore Our Menu
       </p>
