@@ -1,7 +1,10 @@
+import Navbar from "@/components/navigation/navbar/Navbar";
+
 const Menu = () => {
   return (
     <>
-      <p className="text-easyy max-[1100px]:border-t-[87px] border border-t-[95px] p-16 text-center text-logo-100 ">
+      <Navbar handleBlur={handleBlur} blurr={isBlurr} />
+      <p className="text-easyy border border-t-[95px] p-16 text-center text-logo-100 max-[1100px]:border-t-[87px] ">
         Explore Our Menu
       </p>
       <form className="mt-10 flex items-center justify-center">
