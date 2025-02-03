@@ -1,10 +1,12 @@
-import Navbar from "@/components/navigation/navbar/Navbar";
 import { useState, useCallback } from "react";
-const [isBlur, setIsBlur] = useState(false);
-const handleBlur = useCallback(() => {
-  setIsBlur(!isBlur);
-}, [isBlur]);
+
+import Navbar from "@/components/navigation/navbar/Navbar";
+
 const Menu = () => {
+  const [isBlur, setIsBlur] = useState(false);
+  const handleBlur = useCallback(() => {
+    setIsBlur(!isBlur);
+  }, [isBlur]);
   return (
     <>
       <Navbar handleBlur={handleBlur} blurr={isBlurr} />
