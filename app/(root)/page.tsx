@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 
 import Bottom from "@/components/navigation/bottom/Bottom";
@@ -9,10 +10,14 @@ import { Button } from "@/components/ui/button";
 import WeeklyOption from "@/components/weekly/WeeklyOption";
 
 export default function Home() {
+  const router = useRouter();
   const [isBlur, setIsBlur] = useState(false);
   const handleBlur = useCallback(() => {
     setIsBlur(!isBlur);
   }, [isBlur]);
+  const clickPlan = () => {
+    router.push("/plans");
+  };
 
   return (
     <>
@@ -24,7 +29,10 @@ export default function Home() {
             <p>Fresh ingredients</p>
             <p>Fast delivery.</p>
             <a href="/plans">
-              <Button className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900">
+              <Button
+                className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900"
+                onClick={() => {}}
+              >
                 Start your plan
               </Button>
             </a>
@@ -67,7 +75,10 @@ export default function Home() {
                 {`for as little as\u00A0`}
                 <p className="text-price text-logo-100 max-sm:text-xl">$5.99</p>
               </div>
-              <Button className="rounded-full bg-logo-100  p-7 text-[24px] font-[400] text-white hover:bg-green-900">
+              <Button
+                className="rounded-full bg-logo-100  p-7 text-[24px] font-[400] text-white hover:bg-green-900"
+                onClick={() => clickPlan}
+              >
                 Start your plan
               </Button>
             </div>
