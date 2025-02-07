@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
 import Bottom from "@/components/navigation/bottom/Bottom";
