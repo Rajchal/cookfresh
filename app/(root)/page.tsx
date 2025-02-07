@@ -28,14 +28,15 @@ export default function Home() {
             <p>Easy meal kits.</p>
             <p>Fresh ingredients</p>
             <p>Fast delivery.</p>
-            <a href="/plans">
-              <Button
-                className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900"
-                onClick={() => {}}
-              >
-                Start your plan
-              </Button>
-            </a>
+
+            <Button
+              className="mt-6 w-[258.15] rounded-full bg-logo-100 py-[35px] text-[30px] font-[400] text-white hover:bg-green-900"
+              onClick={() => {
+                clickPlan();
+              }}
+            >
+              Start your plan
+            </Button>
           </div>
         </section>
         <section className="mt-28 flex items-center justify-center max-mainClash:flex-col">
@@ -48,7 +49,11 @@ export default function Home() {
               prepared meals delivered fresh with top quality ingredients now
               starting at just $9.99.
             </p>
-            <Button className="self-center rounded-full bg-white p-5 text-[20px] font-[500] text-logo-100 hover:bg-stone-300">
+
+            <Button
+              className="self-center rounded-full bg-white p-5 text-[20px] font-[500] text-logo-100 hover:bg-stone-300"
+              onClick={() => clickPlan}
+            >
               Start your plan
             </Button>
           </div>
