@@ -52,7 +52,7 @@ export default function Home() {
 
             <Button
               className="self-center rounded-full bg-white p-5 text-[20px] font-[500] text-logo-100 hover:bg-stone-300"
-              onClick={() => clickPlan}
+              onClick={() => clickPlan()}
             >
               Start your plan
             </Button>
@@ -82,7 +82,7 @@ export default function Home() {
               </div>
               <Button
                 className="rounded-full bg-logo-100  p-7 text-[24px] font-[400] text-white hover:bg-green-900"
-                onClick={() => clickPlan}
+                onClick={() => clickPlan()}
               >
                 Start your plan
               </Button>
