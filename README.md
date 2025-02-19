@@ -1,33 +1,38 @@
 # CookFresh
 
-Welcome to **CookFresh**, your go-to recipe finding website! Discover new recipes, save your favorites, and share your culinary creations with the world.
+Welcome to CookFresh! This is your go-to platform for discovering and sharing fresh, delicious recipes.
 
 ## Features
 
-- **Search Recipes**: Find recipes by ingredients, cuisine, or dietary preferences.
-- **Save Favorites**: Bookmark your favorite recipes for easy access.
-- **Share Recipes**: Share your own recipes with the community.
-- **User Reviews**: Read and write reviews for recipes.
-- **Responsive Design**: Enjoy a seamless experience on any device.
-- **Advanced Filtering**: Use advanced filters to narrow down your search results.
+- **Browse Recipes**: Explore a wide variety of recipes from different cuisines.
+- **Submit Your Own Recipes**: Share your favorite recipes with the community.
+- **Save Favorites**: Keep track of recipes you love by saving them to your favorites.
+- **Search Functionality**: Easily find recipes by ingredients, cuisine, or dietary preferences.
 
 ## Getting Started
 
-1. **Sign Up**: Create an account to start saving and sharing recipes.
-2. **Search**: Use the search bar to find recipes that match your criteria.
-3. **Save**: Click the heart icon to save recipes to your favorites.
-4. **Share**: Submit your own recipes to share with the community.
+To get started with CookFresh, follow these steps:
 
-## Technologies Used
-
-- **Frontend**: HTML, CSS, JavaScript, React, Next.js
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Styling**: Tailwind CSS for modern and responsive design
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/cookfresh.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd cookfresh
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
 ## Contributing
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information.
 
 ## License
 
@@ -35,6 +40,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please contact us at rajchalanjal1@gmail.com
+If you have any questions or feedback, feel free to reach out to us at support@cookfresh.com.
 
 Happy Cooking!
