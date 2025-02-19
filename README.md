@@ -2,8 +2,6 @@
 
 Welcome to **CookFresh**, your go-to recipe finding website! Discover new recipes, save your favorites, and share your culinary creations with the world.
 
-This is an improved version of the previous website [cookfresh.online](http://cookfresh.online) which was made with HTML, CSS, JavaScript, and Bootstrap. In this project, we have upgraded to using **Next.js** for a more robust and scalable application.
-
 ## Features
 
 - **Search Recipes**: Find recipes by ingredients, cuisine, or dietary preferences.
