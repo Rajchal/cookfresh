@@ -15,7 +15,7 @@ To get started with CookFresh, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cookfresh.git
+   git clone https://github.com/Rajchal/cookfresh.git
    ```
 2. Navigate to the project directory:
    ```bash
